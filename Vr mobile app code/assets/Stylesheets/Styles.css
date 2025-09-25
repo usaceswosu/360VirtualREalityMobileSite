@@ -1,0 +1,168 @@
+/* Basic reset and Bootstrap grid fixes */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dee2e6; /* Change this color to whatever you want */
+}
+
+.container-fluid {
+    padding: 0; /* Remove default Bootstrap padding */
+}
+
+.container-fluid .row {
+    margin: 0; /* Remove Bootstrap row margins */
+}
+
+.container-fluid .row > [class*="col-"] {
+    padding: 0; /* Remove Bootstrap column padding */
+}
+
+/* DataTable Container Styling */
+.content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Responsive DataTable */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .table-container {
+        padding: 15px;
+    }
+    
+    /* Make table more mobile-friendly */
+    table.dataTable {
+        font-size: 14px;
+    }
+    
+    .dataTables_wrapper .dataTables_filter input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* Custom Table Footer Styling */
+.table-footer {
+    background-color: #f8f9fa !important;
+    border-top: 2px solid #dee2e6 !important;
+    padding: 15px !important;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left {
+    font-weight: 600;
+    color: #495057;
+}
+
+.footer-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.footer-right {
+    gap: 8px;
+}
+
+.crop {
+    width: 60px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 15%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Card-Style Table Layout */
+@media (max-width: 576px) {
+    /* Hide the original table headers on mobile */
+    .table thead {
+        display: none;
+    }
+    
+    /* Make table rows display as cards */
+    .table tbody tr {
+        display: block;
+        border: 2px solid #969696;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Make each cell a block element with label */
+    .table tbody td {
+        display: block;
+        border: none;
+        padding: 15px;
+        border-bottom: 1px solid #969696;
+    }
+    
+    /* Add labels before each cell content */
+    .table tbody td:nth-child(1):before { content: "Arkansas: "; }
+    .table tbody td:nth-child(2):before { content: "Georgia: "; }
+    .table tbody td:nth-child(3):before { content: "Missouri: "; }
+    .table tbody td:nth-child(4):before { content: "Ohio: "; }
+    .table tbody td:nth-child(5):before { content: "West Virginia: "; }
+    
+    /* Style the labels */
+    .table tbody td:before {
+        font-weight: bold;
+        color: #495057;
+        display: inline-block;
+        width: 120px;
+        margin-right: 10px;
+    }
+    
+    /* Hide empty cells on mobile */
+    .table tbody td:empty {
+        display: none;
+    }
+    
+    /* Remove last border from last cell in each card */
+    .table tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    /* Adjust footer for mobile */
+    .table tfoot {
+        display: block;
+    }
+    
+    .table tfoot tr {
+        display: block;
+    }
+    
+    .table tfoot th {
+        display: block;
+        border: none;
+    }
+}
