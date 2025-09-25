@@ -92,8 +92,8 @@ body {
 }
 
 .crop {
-    width: 60px; /* Set the desired width */
-    height: 50px; /* Set the desired height */
+    width: 60px;
+    height: 50px; 
     overflow: hidden; /* Hide any overflow */
     border-radius: 15%; /* Make it circular */
     display: flex;
@@ -102,7 +102,7 @@ body {
 }
 
 /* Mobile Card-Style Table Layout */
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     /* Hide the original table headers on mobile */
     .table thead {
         display: none;
