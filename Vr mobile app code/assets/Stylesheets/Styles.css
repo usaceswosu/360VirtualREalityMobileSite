@@ -123,7 +123,9 @@ body {
         display: block;
         border: none;
         padding: 15px;
-        border-bottom: 1px solid #969696;
+        border-bottom: 2px solid #969696;
+        border-radius: 5px;
+        white-space: nowrap;
     }
     
     /* Add labels before each cell content */
@@ -135,21 +137,17 @@ body {
     
     /* Style the labels */
     .table tbody td:before {
+
         font-weight: bold;
         color: #495057;
         display: inline-block;
-        width: 120px;
+        width: 110px;
         margin-right: 10px;
     }
     
     /* Hide empty cells on mobile */
     .table tbody td:empty {
         display: none;
-    }
-    
-    /* Remove last border from last cell in each card */
-    .table tbody td:last-child {
-        border-bottom: none;
     }
     
     /* Adjust footer for mobile */
