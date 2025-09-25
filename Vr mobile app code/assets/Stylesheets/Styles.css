@@ -91,6 +91,16 @@ body {
     gap: 8px;
 }
 
+.crop {
+    width: 60px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 15%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Mobile Card-Style Table Layout */
 @media (max-width: 576px) {
     /* Hide the original table headers on mobile */
