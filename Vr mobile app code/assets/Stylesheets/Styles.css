@@ -108,6 +108,9 @@ body {
         display: none;
     }
     
+    .table-container {
+        max-width: 500px; /* ← Smaller container */
+    }
     /* Make table rows display as cards */
     .table tbody tr {
         display: block;
@@ -116,6 +119,7 @@ body {
         margin-bottom: 15px;
         padding: 15px;
         box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
+        max-width: 500px;
     }
     
     /* Make each cell a block element with label */
@@ -123,17 +127,19 @@ body {
         display: block;
         border: none;
         padding: 15px;
+        font-size: 18px;
         border-bottom: 2px solid #969696;
         border-radius: 5px;
         white-space: nowrap;
+        text-align: center;        /* ← Centers the text horizontally */
     }
     
     /* Add labels before each cell content */
-    .table tbody td:nth-child(1):before { content: "Arkansas: "; }
-    .table tbody td:nth-child(2):before { content: "Georgia: "; }
-    .table tbody td:nth-child(3):before { content: "Missouri: "; }
-    .table tbody td:nth-child(4):before { content: "Ohio: "; }
-    .table tbody td:nth-child(5):before { content: "West Virginia: "; }
+    .table tbody td:nth-child(1):before { content: "Arkansas "; }
+    .table tbody td:nth-child(2):before { content: "Georgia "; }
+    .table tbody td:nth-child(3):before { content: "Missouri "; }
+    .table tbody td:nth-child(4):before { content: "Ohio "; }
+    .table tbody td:nth-child(5):before { content: "West Virginia "; }
     
     /* Style the labels */
     .table tbody td:before {
@@ -141,8 +147,9 @@ body {
         font-weight: bold;
         color: #495057;
         display: inline-block;
-        width: 110px;
-        margin-right: 10px;
+        width: auto;
+        font-size: 25px;
+        margin-right: 10px; /* Space between label and content */
     }
     
     /* Hide empty cells on mobile */
@@ -163,4 +170,16 @@ body {
         display: block;
         border: none;
     }
+}
+
+@media (max-width: 576px) {
+   .table tbody td {
+       padding: 15px;
+       font-size: 14px;
+       white-space: normal; /* Allow text to wrap */
+       word-break: break-word;
+   }
+   .table tbody td:before {
+       font-size: 20px;
+   }
 }
