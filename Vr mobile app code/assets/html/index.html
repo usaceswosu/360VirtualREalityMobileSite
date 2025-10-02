@@ -30,7 +30,8 @@
             <div class="col-10">
                 <div class="content mt-5">
                     <div class="table-container">
-                        <table id="dataTable" class="table table-striped table-bordered">
+
+                        <table id="dataTable" class="table table-striped table-bordered" >
                             <thead>
                                 <tr>
                                     <th>Arkansas</th>
@@ -42,13 +43,27 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Beaver Lake, Lake Ouachita</td>
-                                    <td>Carters Lake, Allatoona Lake</td>
-                                    <td>Table Rock Lake</td>
-                                    <td>Beech Fork Lake</td>
-                                    <td>Alum Creek</td>
+                                    <td> 
+                                        <p class="my-auto p-0" data-bs-toggle="modal" data-bs-target="#BeaverLake" >Beaver Lake</p>
+                                        <p class="my-auto p-0">Lake Ouachita</p>
+                                    </td>
+                                    <td>
+                                        <p class="my-auto p-0">Carters Lake</p>
+                                        <p class="my-auto p-0">Allatoona Lake</p>
+                                    </td>
+                                    <td>
+                                        <p class="my-auto p-0">Table Rock Lake</p>
+                                    </td>
+                                    <td>
+                                        <p class="my-auto p-0">Beech Fork Lake</p>
+                                    </td>
+                                    <td>
+                                        <p class="my-auto p-0">Alum Creek</p>
+                                    </td>
                                 </tr>
                             </tbody>
+
+                            <!--Table Footer-->
                             <tfoot>
                                 <tr>
                                     <th colspan="5" class="table-footer">
@@ -69,10 +84,35 @@
                                      </th>
                                 </tr>
                             </tfoot>
+
                         </table>
+
                     </div>
                 </div>
             </div>
+
+
+            <!-- Modal Test Run || BEAVER LAKE -->
+            <div class="modal fade" id="BeaverLake" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             
             <!-- Right Empty Column -->
             <div class="col-1">
@@ -80,6 +120,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
 
     <!-- jQuery (required for DataTables) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
