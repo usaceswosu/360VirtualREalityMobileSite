@@ -1,8 +1,7 @@
-/* Basic reset and Bootstrap grid fixes */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #dee2e6; /* Change this color to whatever you want */
+    background-color: #dee2e6;
 }
 
 .container-fluid {
@@ -32,14 +31,15 @@ body {
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
 }
 
 /* Custom Table Footer Styling */
 .table-footer {
     background-color: #f8f9fa !important;
-    border-top: 2px solid #dee2e6 !important;
+    border-top: 2px solid #a3a6a9 !important;
+    border-bottom: 2px solid #a3a6a9 !important;
     padding: 15px !important;
 }
 
@@ -104,6 +104,7 @@ body {
     .table tbody tr {
         display: block;
         border: 2px solid #969696;
+        background-color: #d6d2c8;
         border-radius: 10px;
         margin-bottom: 15px;
         padding: 15px;
@@ -118,6 +119,7 @@ body {
         padding: 15px;
         font-size: 18px;
         border-bottom: 2px solid #969696;
+        background-color: #faf9f6;
         border-radius: 5px;
         white-space: nowrap;
         text-align: center;        /* ← Centers the text horizontally */
