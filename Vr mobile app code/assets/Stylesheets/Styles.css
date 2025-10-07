@@ -36,27 +36,6 @@ body {
     padding: 20px;
 }
 
-/* Responsive DataTable */
-@media (max-width: 768px) {
-    .content {
-        padding: 10px;
-    }
-    
-    .table-container {
-        padding: 15px;
-    }
-    
-    /* Make table more mobile-friendly */
-    table.dataTable {
-        font-size: 14px;
-    }
-    
-    .dataTables_wrapper .dataTables_filter input {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
-}
-
 /* Custom Table Footer Styling */
 .table-footer {
     background-color: #f8f9fa !important;
@@ -107,7 +86,17 @@ body {
     .table thead {
         display: none;
     }
+
+    .toggle-label {
+        font-size: 20px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
     
+    .form-check-label {
+        font-size: 22px;
+    }
     .table-container {
         max-width: 500px; /* ← Smaller container */
     }
@@ -172,7 +161,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px) {  /* Further adjustments for VERY small screens */
    .table tbody td {
        padding: 15px;
        font-size: 14px;
@@ -180,6 +169,17 @@ body {
        word-break: break-word;
    }
    .table tbody td:before {
-       font-size: 20px;
+       font-size: 15px;
    }
+
+   .toggle-label {
+        font-size: 15px;
+    }
+    .form-check-input {
+        height: 15px;
+    }
+    
+    .form-check-label {
+        font-size: 17px;
+    }
 }
