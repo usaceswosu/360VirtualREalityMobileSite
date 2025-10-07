@@ -44,21 +44,77 @@
                             <tbody>
                                 <tr>
                                     <td> 
-                                        <p class="my-auto p-0" data-bs-toggle="modal" data-bs-target="#BeaverLake" >Beaver Lake</p>
-                                        <p class="my-auto p-0">Lake Ouachita</p>
+                                        <!--Beaver Lake-->
+                                        <p class="my-auto p-0" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Beaver Lake"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Beaver Lake
+                                        </p>
+                                        <!--Lake Ouachita-->
+                                        <p class="my-auto p-0"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Lake Ouachita"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Lake Ouachita
+                                        </p>
                                     </td>
                                     <td>
-                                        <p class="my-auto p-0">Carters Lake</p>
-                                        <p class="my-auto p-0">Allatoona Lake</p>
+                                        <!--Carters Lake-->
+                                        <p class="my-auto p-0" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Carters Lake"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Carters Lake
+                                        </p>
+                                        <!--Allatoona Lake-->
+                                        <p class="my-auto p-0"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Allatoona Lake"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Allatoona Lake
+                                        </p>
                                     </td>
                                     <td>
-                                        <p class="my-auto p-0">Table Rock Lake</p>
+                                        <!--Table Rock Lake-->
+                                        <p class="my-auto p-0"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Table Rock Lake"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Table Rock Lake
+                                        </p>
                                     </td>
                                     <td>
-                                        <p class="my-auto p-0">Beech Fork Lake</p>
+                                        <!--Beech Fork-->
+                                        <p class="my-auto p-0"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Beech Fork Lake"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Beech Fork Lake
+                                        </p>
                                     </td>
                                     <td>
-                                        <p class="my-auto p-0">Alum Creek</p>
+                                        <!--Alum Creek-->
+                                        <p class="my-auto p-0"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#universalModal"
+                                        data-bs-heading="Alum Creek"
+                                        data-bs-footercontent="Close Button In Progress"
+                                        data-bs-modalcontent="Videos Go Here">
+                                            Alum Creek
+                                        </p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -92,24 +148,23 @@
             </div>
 
 
-            <!-- Modal Test Run || BEAVER LAKE -->
-            <div class="modal fade" id="BeaverLake" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                    </div>
-                </div>
+            <!-- Modal Skeleton -->
+            <div class="modal" id="universalModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Placeholder Title</h3>
+                                </div>
+                                <div class="modal-body">
+                                    Placeholder Content
+                                </div>
+                                <div class="modal-footer text-center">
+                                    Placeholder Footer
+                                </div>
+                            </div>
+                        </div>
             </div>
+                
 
 
 
@@ -123,7 +178,23 @@
 
 
 
+    <script>
+        const myModal = document.querySelector('#universalModal');
+            myModal.addEventListener('show.bs.modal', function(event) {
+                // Get the reference of the triggering button
+                const button = event.relatedTarget;
 
+                // Get the data for inserting into modal
+                const heading = button.getAttribute('data-bs-heading');
+                const modalcontent = button.getAttribute('data-bs-modalcontent');
+                const footercontent = button.getAttribute('data-bs-footercontent');
+
+                // Set the value in the modal
+                myModal.querySelector('.modal-title').textContent = heading;
+                myModal.querySelector('.modal-body').textContent = modalcontent;
+                myModal.querySelector('.modal-footer').textContent = footercontent;
+            });
+    </script>
 
 
 
