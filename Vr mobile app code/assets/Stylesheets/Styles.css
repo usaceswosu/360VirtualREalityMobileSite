@@ -71,8 +71,8 @@ body {
 }
 
 .crop {
-    width: 60px;
-    height: 50px; 
+    width: 55px;
+    height: 45px; 
     overflow: hidden; /* Hide any overflow */
     border-radius: 15%; /* Make it circular */
     display: flex;
