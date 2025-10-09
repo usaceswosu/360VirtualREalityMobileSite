@@ -11,5 +11,5 @@ const myModal = document.querySelector('#universalModal');
         // Set the value in the modal
         myModal.querySelector('.modal-title').textContent = heading;
         myModal.querySelector('.modal-body').textContent = modalcontent;
-        myModal.querySelector('.modal-footer').textContent = footercontent;
+        
     });
