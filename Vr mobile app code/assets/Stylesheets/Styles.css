@@ -29,15 +29,15 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
+    background: linear-gradient(to bottom, rgb(106, 139, 110), rgb(75, 96, 77)); /* Diagonal green gradient */
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
 }
 
 /* Custom Table Footer Styling */
 .table-footer {
-    background-color: #f8f9fa !important;
+    background-color: #d6d2c8 !important;
     border-top: 2px solid #a3a6a9 !important;
     border-bottom: 2px solid #a3a6a9 !important;
     padding: 15px !important;
@@ -70,15 +70,65 @@ body {
     gap: 8px;
 }
 
-.crop {
-    width: 55px;
+.crop { /* Class to crop logo image */
+    width: 60px;
     height: 45px; 
     overflow: hidden; /* Hide any overflow */
-    border-radius: 15%; /* Make it circular */
+    border-radius: 10%; /* Make it circular */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.table tbody td a {
+    color: #606060;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.table tbody td a:hover {
+    color: #212121;
+    text-decoration: underline;
+}
+
+/* Custom ball/handle styling for toggle switch */
+.form-check-input {
+    background-color: rgb(106, 139, 110);           /* Off state background (green) */
+    border-color: #6c757d;               /* Off state border */
+    position: relative;                  /* Needed for positioning the ball */
+}
+
+.form-check-input:checked {
+    background-color: rgb(106, 139, 110);           /* On state background (green) */
+    border-color: #6c757d;               /* On state border */
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(10, 146, 0, 0.416); /* Focus glow */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
+}
+
+/* Style the ball/handle */
+.form-check-input::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: #d6d2c8;           /* Light cream ball when OFF */
+    border: 1px solid #a3a6a9;          /* Light border */
+    border-radius: 50%;
+    left: 2px;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-input:checked::before {
+    left: calc(100% - 16px);             /* Move ball to right when toggled */
+    background-color: #d6d2c8;           /* Cream color when ON */
+    border-color: #a3a6a9;               /* Darker border when ON */
+}
+
+
 
 /* Mobile Card-Style Table Layout */
 @media (max-width: 992px) {
@@ -119,7 +169,7 @@ body {
         padding: 15px;
         font-size: 18px;
         border-bottom: 2px solid #969696;
-        background-color: #faf9f6;
+        background-color: #f6faf6;
         border-radius: 5px;
         white-space: nowrap;
         text-align: center;        /* ← Centers the text horizontally */
@@ -161,6 +211,11 @@ body {
         display: block;
         border: none;
     }
+    .form-check-input::before {
+        width: 14px; /* Slightly bigger ball for tablet view to match toggle switch */
+        height: 14px;
+        bottom: 2px; /* Adjust ball position to align better for tablet view */
+    }
 }
 
 @media (max-width: 576px) {  /* Further adjustments for VERY small screens */
@@ -183,5 +238,11 @@ body {
     
     .form-check-label {
         font-size: 17px;
+    }
+    .form-check-input::before {
+        width: 13px; /* S lightly smaller ball for mobile view */
+        height: 13px;
+        bottom: 0px; /* Adjust ball position to align better for mobile view */
+        transform: translateX(1px); /* Slightly adjust ball position */
     }
 }
