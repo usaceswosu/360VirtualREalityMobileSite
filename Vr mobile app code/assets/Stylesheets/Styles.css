@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'RemachineScript';
+    src: url(../fonts/mick-caster/Mick\ Caster.ttf) format('truetype');
+}
+
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin: 0px;
+    font-family: 'Mick_Caster', 'Helvetica', sans-serif;
     background-color: #dee2e6;
 }
 
