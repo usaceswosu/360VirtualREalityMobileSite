@@ -173,6 +173,7 @@ body {
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
+         background-color: transparent;
             background-attachment: fixed;
             filter: brightness(0.7); /* Optional: darken the image for better contrast */
 
