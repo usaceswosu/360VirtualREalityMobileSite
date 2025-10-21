@@ -59,8 +59,8 @@ body {
 
 /* Custom Table Footer Styling */
 .table-footer {
-    background-color: #f8f9fa !important;
-    border-top: 2px solid #dee2e6 !important;
+    background-color: #f1e9d2 !important;
+    border-top: 2px solid #f1e9d2 !important;
     padding: 15px !important;
 }
 
@@ -165,4 +165,17 @@ body {
         display: block;
         border: none;
     }
+
+   
+
+    body {
+         background-image: url('../images/pexels-sebastian-palomo.jpg'); /* Replace with your image path */
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: brightness(0.7); /* Optional: darken the image for better contrast */
+
+    }
+
 }
