@@ -6,7 +6,6 @@ const myModal = document.querySelector('#universalModal');
         // Get the data for inserting into modal
         const heading = button.getAttribute('data-bs-heading');
         const modalcontent = button.getAttribute('data-bs-modalcontent');
-        const footercontent = button.getAttribute('data-bs-footercontent');
 
         // Set the value in the modal
         myModal.querySelector('.modal-title').textContent = heading;
