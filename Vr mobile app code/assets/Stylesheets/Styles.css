@@ -166,17 +166,12 @@ body {
         border: none;
     }
 
-   
-
-    body {
-         background-image: url('../images/pexels-sebastian-palomo.jpg'); /* Replace with your image path */
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-         background-color: transparent;
-            background-attachment: fixed;
-            filter: brightness(0.7); /* Optional: darken the image for better contrast */
 
     }
 
+    body {
+
+        background-image: url('../images/forest.png');
+        background-size: cover;
+        background-position: center;
 }
