@@ -6,9 +6,15 @@ const myModal = document.querySelector('#universalModal');
         // Get the data for inserting into modal
         const heading = button.getAttribute('data-bs-heading');
         const modalcontent = button.getAttribute('data-bs-modalcontent');
+        //const modalcontent = button.getAttribute(if('data-bs-modalcontent-beaverlake'){
+        //    'data-bs-modalcontent-beaverlake'
+        //} else{
+        //    'data-bs-modalcontent'
+        //});
 
         // Set the value in the modal
         myModal.querySelector('.modal-title').textContent = heading;
         myModal.querySelector('.modal-body').textContent = modalcontent;
         
     });
+
