@@ -7,7 +7,9 @@
 body {
     margin: 0px;
     font-family: 'Mick-CasterScript', sans-serif;
-    background-color: #dee2e6;
+    background-image: url('../images/forest.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .container-fluid {
@@ -35,7 +37,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background: linear-gradient(to bottom, rgb(106, 139, 110), rgb(75, 96, 77)); /* Diagonal green gradient */
+    background: linear-gradient(to bottom, rgb(66, 99, 70), rgb(35, 56, 37)); /* Diagonal green gradient */ /*106,139,110 to 75,96,77 for first option*/
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
@@ -43,7 +45,7 @@ body {
 
 /* Custom Table Footer Styling */
 .table-footer {
-    background-color: #d6d2c8 !important;
+    background-color: #ffeac1 !important;
     border-top: 2px solid #a3a6a9 !important;
     border-bottom: 2px solid #a3a6a9 !important;
     padding: 15px !important;
@@ -93,8 +95,9 @@ body {
 }
 
 .table tbody td a:hover {
-    color: #212121;
+    color: #212121; /*212121 for darker on hover*/
     text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 /* Custom ball/handle styling for toggle switch */
