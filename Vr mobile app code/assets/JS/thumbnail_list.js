@@ -1,6 +1,6 @@
 const thumbnails = imageList.map(name => {
   //change images/ file path to function
-  const safeSrc = "images/" + encodeURIComponent(name);
+  const safeSrc = "../images/" + encodeURIComponent(name);
   return {
     name: name.replace(".png", ""),
     src: safeSrc,
