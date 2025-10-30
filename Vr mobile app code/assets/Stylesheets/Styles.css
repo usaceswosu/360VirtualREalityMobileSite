@@ -91,12 +91,15 @@ body {
     color: #606060;
     text-decoration: none;
     font-weight: 500;
+    display: inline-block; /* Required for transforms to work for text */
+    transition: all 0.3s ease;
 }
 
 .table tbody td a:hover {
     color: #212121; /*212121 for darker on hover*/
     text-decoration: underline;
-    transition: color 0.3s ease;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth */
 }
 
 /* Custom ball/handle styling for toggle switch */
@@ -112,7 +115,9 @@ body {
 }
 
 .form-check-input:focus {
-    box-shadow: 0 0 0 0.2rem rgba(10, 146, 0, 0.416); /* Focus glow */
+    box-shadow: 0 0 0 0.2rem rgba(10, 146, 0, 0.416) !important; /* Focus glow */
+    border-color: #6c757d !important;
+    outline: none !important;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
 }
 
