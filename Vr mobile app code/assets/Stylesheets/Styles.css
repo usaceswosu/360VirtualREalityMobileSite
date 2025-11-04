@@ -197,3 +197,95 @@ body {
   outline: 3px solid dodgerblue;
   transform: scale(1.08);
 }
+
+/* Modal Customization */
+.modal-content {
+    background: linear-gradient(135deg, #f6faf6, #e8f5e8);
+    border-radius: 15px;
+    border: 3px solid #6a8b6e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #6a8b6e, #4b604d);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 2px solid #4b604d;
+}
+
+.modal-title {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 1.2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    font-family: 'Mick-CasterScript', sans-serif;
+}
+
+.modal-footer {
+    border-top: 2px solid #6a8b6e;
+    background-color: #ffeac1;
+}
+
+#view360Btn {
+    background-color: #6a8b6e;
+    border-color: #4b604d;
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#view360Btn:hover {
+    background-color: #4b604d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#viewVRBtn {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#viewVRBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body h6 {
+    color: #4b604d;
+    font-size: 1.2rem;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+.lake-modal-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
