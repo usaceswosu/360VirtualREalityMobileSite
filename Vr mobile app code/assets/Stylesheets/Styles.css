@@ -229,6 +229,24 @@ body {
         height: 14px;
         bottom: 2px; /* Adjust ball position to align better for tablet view */
     }
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+
+
+    .lake-modal-image {
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 576px) {  /* Further adjustments for VERY small screens */
@@ -258,4 +276,171 @@ body {
         bottom: 0px; /* Adjust ball position to align better for mobile view */
         transform: translateX(1px); /* Slightly adjust ball position */
     }
+}
+/* Mobile Card-Style Table Layout */
+@media (max-width: 576px) {
+    /* Hide the original table headers on mobile */
+    .table thead {
+        display: none;
+    }
+    
+    /* Make table rows display as cards */
+    .table tbody tr {
+        display: block;
+        border: 2px solid #969696;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Make each cell a block element with label */
+    .table tbody td {
+        display: block;
+        border: none;
+        padding: 15px;
+        border-bottom: 1px solid #969696;
+    }
+    
+    /* Add labels before each cell content */
+    .table tbody td:nth-child(1):before { content: "Arkansas: "; }
+    .table tbody td:nth-child(2):before { content: "Georgia: "; }
+    .table tbody td:nth-child(3):before { content: "Missouri: "; }
+    .table tbody td:nth-child(4):before { content: "Ohio: "; }
+    .table tbody td:nth-child(5):before { content: "West Virginia: "; }
+    
+    /* Style the labels */
+    .table tbody td:before {
+        font-weight: bold;
+        color: #495057;
+        display: inline-block;
+        width: 120px;
+        margin-right: 10px;
+    }
+    
+    /* Hide empty cells on mobile */
+    .table tbody td:empty {
+        display: none;
+    }
+    
+    /* Remove last border from last cell in each card */
+    .table tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    /* Adjust footer for mobile */
+    .table tfoot {
+        display: block;
+    }
+    
+    .table tfoot tr {
+        display: block;
+    }
+    
+    .table tfoot th {
+        display: block;
+        border: none;
+    }
+}
+
+/*For Images/Thumbnails*/
+.thumb-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.thumb-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.thumb-btn img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.thumb-btn:hover {
+  transform: scale(1.05);
+}
+
+.thumb-btn.selected {
+  outline: 3px solid dodgerblue;
+  transform: scale(1.08);
+}
+
+/* Modal Customization */
+.modal-content {
+    background: linear-gradient(135deg, #f6faf6, #e8f5e8);
+    border-radius: 15px;
+    border: 3px solid #6a8b6e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #6a8b6e, #4b604d);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 2px solid #4b604d;
+}
+
+.modal-title {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 1.2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    font-family: 'Mick-CasterScript', sans-serif;
+}
+
+.modal-footer {
+    border-top: 2px solid #6a8b6e;
+    background-color: #ffeac1;
+}
+
+#view360Btn {
+    background-color: #6a8b6e;
+    border-color: #4b604d;
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#view360Btn:hover {
+    background-color: #4b604d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#viewVRBtn {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#viewVRBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body h6 {
+    color: #4b604d;
+    font-size: 1.2rem;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
