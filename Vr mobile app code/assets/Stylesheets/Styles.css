@@ -289,8 +289,3 @@ body {
     width: 100%;
     object-fit: cover;
 }
-
-/*Styling for images in models */
-.beaverLake {
-    list-style-image: url("../images/Dam Site Island Camp.png");
-}

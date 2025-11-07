@@ -48,12 +48,11 @@
 
                                         <!--Beaver Lake-->
                                         <p><a href="#" class="lake-link" 
-                                            style="beaverLake"
                                             data-lake="Beaver Lake" 
                                             data-state="Arkansas" 
                                             data-location="Rogers, AR"
                                             data-description="Beaver Lake is a man-made reservoir in the Ozark Mountains of Northwest Arkansas. Known for its clear water and excellent fishing, the lake offers 28,220 acres of pristine water surrounded by beautiful hardwood forests."
-                                            data-lakeImage="lake">
+                                            data-image="../images/Dam Site Island Camp.png">
                                             Beaver Lake
                                         </a></p>
 
@@ -227,6 +226,7 @@ $(document).ready(function() {
         $('#lakeState').text(lakeState);
         $('#lakeLocation').text(lakeLocation);
         $('#lakeDescription').text(lakeDescription);
+
         
         // Handle image - use placeholder if no image provided
         if (lakeImage && lakeImage !== '') {
@@ -260,4 +260,3 @@ $(document).ready(function() {
 
 </body>
 </html>
-
