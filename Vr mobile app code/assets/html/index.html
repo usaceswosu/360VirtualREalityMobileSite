@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,6 @@
     <!-- Custom CSS (load after Bootstrap) -->
     <link rel="stylesheet" href="../Stylesheets/Styles.css">
 
-    <!--For thumbnails/images-->
-    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
@@ -33,8 +31,7 @@
             <div class="col-10">
                 <div class="content mt-5">
                     <div class="table-container">
-
-                        <table id="dataTable" class="table table-striped table-bordered" >
+                        <table id="dataTable" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th>Arkansas</th>
@@ -46,44 +43,103 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> 
+                                    <!--Arkansas-->
+                                    <td>
+
                                         <!--Beaver Lake-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#beaverLakeModal">Beaver Lake</p>
+                                        <p><a href="#" class="lake-link" 
+                                            style="beaverLake"
+                                            data-lake="Beaver Lake" 
+                                            data-state="Arkansas" 
+                                            data-location="Rogers, AR"
+                                            data-description="Beaver Lake is a man-made reservoir in the Ozark Mountains of Northwest Arkansas. Known for its clear water and excellent fishing, the lake offers 28,220 acres of pristine water surrounded by beautiful hardwood forests."
+                                            data-lakeImage="lake">
+                                            Beaver Lake
+                                        </a></p>
+
                                         <!--Lake Ouachita-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#lakeOuachitaModal">Lake Ouachita</p>
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Lake Ouachita" 
+                                            data-state="Arkansas" 
+                                            data-location="Hot Springs, AR"
+                                            data-description="Lake Ouachita is Arkansas's largest lake, covering 40,000 acres with crystal clear water perfect for recreation. The lake is renowned for its excellent fishing and stunning natural beauty in the Ouachita Mountains.">
+                                            Lake Ouachita
+                                        </a></p>
                                     </td>
+
+                                    <!--Georgia-->
                                     <td>
+
+                                        <!--Allatona Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Allatoona Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Cartersville, GA"
+                                            data-description="Allatoona Lake offers 12,000 acres of pristine water surrounded by beautiful hardwood forests. This popular recreational destination provides excellent boating, swimming, and fishing opportunities in north Georgia.">
+                                            Allatoona Lake
+                                        </a></p>
+
                                         <!--Carters Lake-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#cartersLakeModal">Carters Lake</p>
-                                        <!--Allatoona Lake-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#allatoonaLakeModal">Allatoona Lake</p>
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Carters Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Chatsworth, GA"
+                                            data-description="Carters Lake is Georgia's deepest lake, nestled in the Blue Ridge Mountains. With its crystal-clear waters and scenic mountain backdrop, it's a premier destination for outdoor recreation and natural beauty.">
+                                            Carters Lake
+                                        </a></p>
                                     </td>
+
+                                    <!--Missouri-->
                                     <td>
+
                                         <!--Table Rock Lake-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#tableRockLakeModal">Table Rock Lake</p>
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Table Rock Lake" 
+                                        data-state="Missouri" 
+                                        data-location="Branson, MO"
+                                        data-description="Table Rock Lake spans 43,100 acres with over 800 miles of shoreline in the heart of the Ozarks. Famous for its clear waters and excellent fishing, the lake is a centerpiece of Missouri's outdoor recreation scene.">
+                                        Table Rock Lake
+                                        </a></p>
                                     </td>
+
+                                    <!--Ohio-->
                                     <td>
-                                        <!--Beech Fork-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#beechForkModal">Beech Fork</p>
+
+                                        <!--Beech Fork Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Beech Fork Lake" 
+                                        data-state="Ohio" 
+                                        data-location="Hillsboro, OH"
+                                        data-description="Beech Fork Lake provides excellent boating and fishing opportunities in southern Ohio. This 720-acre lake offers peaceful waters surrounded by rolling hills and dense forests, perfect for outdoor enthusiasts.">
+                                        Beech Fork Lake
+                                    </a></p>
                                     </td>
+
+                                    <!--West Virginia-->
                                     <td>
+
                                         <!--Alum Creek-->
-                                        <p class="my-auto p-0" type="button" data-bs-toggle="modal" data-bs-target="#alumCreekModal">Alum Creek</p>
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Alum Creek" 
+                                        data-state="West Virginia" 
+                                        data-location="Huntington, WV"
+                                        data-description="Alum Creek offers peaceful waters and scenic views in the hills of West Virginia. This smaller lake provides intimate recreational opportunities with excellent access to nature and wildlife viewing.">
+                                        Alum Creek
+                                    </a></p>
                                     </td>
+
                                 </tr>
                             </tbody>
-
-                            <!--Table Footer-->
                             <tfoot>
                                 <tr>
                                     <th colspan="5" class="table-footer">
                                         <div class="footer-content">
                                             <div class="footer-left">
-                                                <span class="toggle-label">View: VR</span>
+                                                <span class="toggle-label">View: 360</span>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="checkbox" id="toggleView">
                                                     <label class="form-check-label" for="toggleView">
-                                                        360
+                                                        VR
                                                     </label>
                                                 </div>
                                             </div>
@@ -94,540 +150,17 @@
                                      </th>
                                 </tr>
                             </tfoot>
-
                         </table>
-
                     </div>
                 </div>
             </div>
-
-            <!--Modals/Pop-Ups-->
-            <!--Beaver Lake-->
-            <div class="modal fade" id="beaverLakeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Beaver Lake</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <div class="row">
-                            <div class="col">
-                            <!--Dam Site Island Camp-->
-                                <a href="https://www.youtube.com/watch?v=g8gGlYtr96I">
-                                    <figure>
-                                        <img src="../images/Dam Site Island Camp.png" alt="Dam Site Island Camp" style="height:100px;width:100px">
-                                        <figcaption>Dam Site Island Camp</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Shoreline Ranger Hike (1)-->
-                                <a href="https://www.youtube.com/watch?v=zLRp9cXnNfo">
-                                    <figure>
-                                        <img src="../images/Shoreline Ranger Hike (1).png" alt="Shoreline Ranger Hike 1" style="height:100px;width:100px">
-                                        <figcaption>Shoreline Ranger Hike(1)</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Shoreline Ranger Hike (2)-->
-                                <a href="https://www.youtube.com/watch?v=Ct_PFVvB5Y0">
-                                    <figure>
-                                        <img src="../images/Shoreline Ramger (2).png" alt="Shoreline Ranger Hike 2" style="height:100px;width:100px">
-                                        <figcaption>Shoreline Ranger Hike (2)</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            
-                            <div class="col">
-                                <!--Shoreline Ranger Hike (3)-->
-                                <a href="https://www.youtube.com/watch?v=xqgnPojbdZU">
-                                    <figure>
-                                        <img src="../images/Shoreline Ranger Hike (3).png" alt="Shoreline Ranger Hike 3" style="height:100px;width:100px">
-                                        <figcaption>Shoreline Ranger Hike (3)</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                            
-                        </div> <!--row closing line-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Lake Ouachita-->
-            <div class="modal fade" id="lakeOuachitaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Lake Ouachita</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <div class="row">
-
-                            <div class="col">
-                                <!--(A) Whirlpool Rock-->
-                                <a href="https://www.youtube.com/watch?v=Wo5FJEMlhtE">
-                                    <figure>
-                                        <img src="../images/(A) Whirlpool Rock.png" alt="(A) Whirlpool Rock" style="height:100px;width:100px">
-                                        <figcaption>(A) Whirlpool Rock</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--(B&C) Submarine Slide and Zebra Rock-->
-                                <a href="https://www.youtube.com/watch?v=fnfykVEtvx0">
-                                    <figure>
-                                        <img src="../images/(B&C) Submarine Slide and Zebra Rock.png" alt="(B&C) Submarine Slide and Zebra Rock" style="height:100px;width:100px">
-                                        <figcaption>(B&C) Submarine Slide and Zebra Rock</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                          
-                            <div class="col">
-                                <!--(D) Recumbant Fold-->
-                                <a href="https://www.youtube.com/watch?v=pZd-Wwkcnj0">
-                                    <figure>
-                                        <img src="../images/(D) Recumbant Fold.png" alt="(D) Recumbant Fold" style="height:100px;width:100px">
-                                        <figcaption>(D) Recumbant Fold</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--(E) Mountains and Valleys.png-->
-                                <a href="https://www.youtube.com/watch?v=pZd-Wwkcnj0">
-                                    <figure>
-                                        <img src="../images/(E) Mountains and Valleys.png" alt="(E) Mountains and Valleys" style="height:100px;width:100px">
-                                        <figcaption>(E) Mountains and Valleys</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--(I) Mini Caves-->
-                                <a href="https://www.youtube.com/watch?v=jHeGYohAr2c">
-                                    <figure>
-                                        <img src="../images/(I) Mini Caves.png" alt="(I) Mini Caves" style="height:100px;width:100px">
-                                        <figcaption>(I) Mini Caves</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-        
-                            <div class="col">
-                                <!--(J) Mother Nature Beach-->
-                                <a href="https://www.youtube.com/watch?v=HaV4SFsv3Qk">
-                                    <figure>
-                                        <img src="../images/(J) Mother Nature Beach .png" alt="(J) Mother Nature Beach" style="height:100px;width:100px">
-                                        <figcaption>(J) Mother Nature Beach</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--(K) Folds and Faults-->
-                                <a href="https://www.youtube.com/watch?v=e5UOtzRybzU">
-                                    <figure>
-                                        <img src="../images/(K) Folds and Faults.png" alt="(K) Folkds and Faults" style="height:100px;width:100px">
-                                        <figcaption>(K) Folds and Faults</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--(L) Sticks and Stones-->
-                                <a href="https://www.youtube.com/watch?v=e5UOtzRybzU">
-                                    <figure>
-                                        <img src="../images/(L) Sticks and Stones.png" alt="(L) Sticks and Stones" style="height:100px;width:100px">
-                                        <figcaption>(L) Sticks and Stones</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Mother Natures Beach-->
-                                <a href="https://www.youtube.com/watch?v=c6k9OtwXieY">
-                                    <figure>
-                                        <img src="../images/Mother Natures Beach.png" alt="Mother Natures Beach" style="height:100px;width:100px">
-                                        <figcaption>Mother Natures Beach</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Mother Natures Beach (2)-->
-                                <a href="https://www.youtube.com/watch?v=01Q6iFva3Eg">
-                                    <figure>
-                                        <img src="../images/Mother Natures Beach (2).png" alt="Mother Natures Beach (2)" style="height:100px;width:100px">
-                                        <figcaption>Mother Natures Beach (2)</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Vista Trail Segment-->
-                                <a href="https://www.youtube.com/watch?v=u4lVDHUSC2sLake%20Ouachita">
-                                    <figure>
-                                        <img src="../images/Vista Trail Segment.png" alt="Vista Trail Segment" style="height:100px;width:100px">
-                                        <figcaption>Vista Trail Segment</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Project Office-->
-                                <a href="https://www.youtube.com/watch?v=VLPJNTJTriIa">
-                                    <figure>
-                                        <img src="../images/Project Office.png" alt="Project Office" style="height:100px;width:100px">
-                                        <figcaption>Project Office</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Low Water Wilderness Den-->
-                                <a href="https://www.youtube.com/watch?v=FuH0ocovlx0">
-                                    <figure>
-                                        <img src="../images/Low Water Wilderness Den.png" alt="Low Water Wilderness Den" style="height:100px;width:100px">
-                                        <figcaption>Low Water Wilderness Den</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Dam and Overlook-->
-                                <a href="https://www.youtube.com/watch?v=oGxEKEzfttA">
-                                    <figure>
-                                        <img src="../images/Dam and Overlook.png" alt="Dam and Overlook" style="height:100px;width:100px">
-                                        <figcaption>Dam and Overlook</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                             <div class="col">
-                                <!--Hickory Nut Mountain-->
-                                <a href="https://www.youtube.com/watch?v=rMq9kE6FqxE">
-                                    <figure>
-                                        <img src="../images/Hickory Nut Mountain.png" alt="Hickory Nut Mounatin" style="height:100px;width:100px">
-                                        <figcaption>Hickory Nut Mountain</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Brady Mountain Overlook-->
-                                <a href="https://www.youtube.com/watch?v=P2IRKgEgGS8">
-                                    <figure>
-                                        <img src="../images/Brady Mountain Overlook.png" alt="Brady Mountain Overlook" style="height:100px;width:100px">
-                                        <figcaption>Brady Mountain Overlook</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Boat Ride-->
-                                <a href="https://www.youtube.com/watch?v=_oIsBWL_LHM">
-                                    <figure>
-                                        <img src="../images/Boat Ride.png" alt="Boat Ride" style="height:100px;width:100px">
-                                        <figcaption>Boat Ride</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <!--Bird Island-->
-                                <a href="https://www.youtube.com/watch?v=2QRuW4S0KvY">
-                                    <figure>
-                                        <img src="../images/Bird Island.png" alt="Bird Island" style="height:100px;width:100px">
-                                        <figcaption>Bird Island</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                        </div> <!--row closing div-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Carters Lake-->
-            <div class="modal fade" id="cartersLakeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Carters Lake</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
-                    <div class="row">
-
-                        <div class="col">
-                                <!--Rim Trail Hike-->
-                                <a href="https://www.youtube.com/watch?v=lWsreyu6OWI">
-                                    <figure>
-                                        <img src="../images/Rim Trail Hike.png" alt="Rim Trail Hike" style="height:100px;width:100px">
-                                        <figcaption>Rim Trail Hike</figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-
-                        </div> <!--row closing div-->
-                    
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Allatoona Lake-->
-            <div class="modal fade" id="allatoonaLakeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Allatoona Lake</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                        <div class="modal-body">
-                        
-                            <div class="row">
-
-                                <div class="col">
-                                    <!--Overlook Trail Hike-->
-                                    <a href="https://www.youtube.com/watch?v=Gt97WoWfzmo">
-                                        <figure>
-                                            <img src="../images/Overlook Trail Hike.png" alt="Overlook Trail Hike" style="height:100px;width:100px">
-                                            <figcaption>Overlook Trail Hike</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Visitor Center-->
-                                    <a href="https://www.youtube.com/watch?v=Gt97WoWfzmo">
-                                        <figure>
-                                            <img src="../images/Visitor Center.png" alt="Visitor Center" style="height:100px;width:100px">
-                                            <figcaption>Visitor Center</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Visitor Center-->
-                                    <a href="https://www.youtube.com/watch?v=rttz17SAAMA">
-                                        <figure>
-                                            <img src="../images/Visitor Center.png" alt="Visitor Center" style="height:100px;width:100px">
-                                            <figcaption>Visitor Center</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Coopers Furnace-->
-                                    <a href="https://www.youtube.com/watch?v=gFT9-pzm2ws">
-                                        <figure>
-                                            <img src="../images/Coopers Furance.png" alt="Coopers Furnace" style="height:100px;width:100px">
-                                            <figcaption>Coopers Furnace</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                            
-
-                            </div> <!--row closing div-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Table Rock Lake-->
-            <div class="modal fade" id="tableRockLakeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Table Rock Lake</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <div class="row">
-
-                                <div class="col">
-                                    <!--Park Ranger Boat Ride-->
-                                    <a href="https://www.youtube.com/watch?v=4NnM9Bu-BU0">
-                                        <figure>
-                                            <img src="../images/Park Ranger Boat Ride.png" alt="Park Ranger Boat Ride" style="height:100px;width:100px">
-                                            <figcaption>Park Ranger Boat Ride</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Dewey Short Visitor Center-->
-                                    <a href="https://www.youtube.com/watch?v=2S0P9jVswps">
-                                        <figure>
-                                            <img src="../images/Dewey Short Visitory Center.png" alt="Dewey Short Visitor Center" style="height:100px;width:100px">
-                                            <figcaption>Dewey Short Visitor Center</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                            
-                            </div> <!--row closing div-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Beech Fork-->
-            <div class="modal fade" id="beechForkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Beech Fork</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <div class="row">
-
-                                <div class="col">
-                                    <!--Beech Fork Visitor Center-->
-                                    <a href="https://www.youtube.com/watch?v=cJ1Zuy2FV8M">
-                                        <figure>
-                                            <img src="../images/Beech Fork Visitor Center.png" alt="Beech Fork Visitor Center" style="height:100px;width:100px">
-                                            <figcaption>Beech Fork Visitor Center</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Beech Fork ATV Trails-->
-                                    <a href="https://www.youtube.com/watch?v=Dv0tVwF5Nbo">
-                                        <figure>
-                                            <img src="../images/Beech Fork ATV Trails.png" alt="Beech Fork ATV Trails" style="height:100px;width:100px">
-                                            <figcaption>Beech Fork ATV Trails</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                            
-                            </div> <!--row closing div-->
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Alum Creek-->
-            <div class="modal fade" id="alumCreekModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Alum Creek</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                            <div class="row">
-
-                                <div class="col">
-                                    <!--Alum Creek Visitor Center-->
-                                    <a href="https://www.youtube.com/watch?v=flcLnDaWR08">
-                                        <figure>
-                                            <img src="../images/Alum Creek Visitor Center (1).png" alt="Alum Creek Visitor Center" style="height:100px;width:100px">
-                                            <figcaption>Alum Creek Visitor Center</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Alum Creek Bike Trail (1)-->
-                                    <a href="https://www.youtube.com/watch?v=hBP_BNHXUy0">
-                                        <figure>
-                                            <img src="../images/Alum Creek Bike Trail (1).png" alt="Alum Creek Bike Trail (1)" style="height:100px;width:100px">
-                                            <figcaption>Alum Creek Bike Trail (1)</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Alum Creek Bike Trail (2)-->
-                                    <a href="https://www.youtube.com/watch?v=TTZZEr5SEdY">
-                                        <figure>
-                                            <img src="../images/Alum Creek Bike Trail (2).png" alt="Alum Creek Bike Trail (2)" style="height:100px;width:100px">
-                                            <figcaption>Alum Creek Bike Trail (2)</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Alum Dam Tour Part 1-->
-                                    <a href="https://www.youtube.com/watch?v=JbqeRIfAaRo">
-                                        <figure>
-                                            <img src="../images/Alum Dam Tour Part 1.png" alt="Alum Dam Tour Part 1" style="height:100px;width:100px">
-                                            <figcaption>Alum Dam Tour Part 1</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <!--Alum Dam Tour (2)-->
-                                    <a href="https://www.youtube.com/watch?v=qpVFPhWdo5k">
-                                        <figure>
-                                            <img src="../images/Alum Dam Tour (2).png" alt="Alum Dam Tour (2)" style="height:100px;width:100px">
-                                            <figcaption>Alum Dam Tour (2)</figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                            
-                            </div> <!--row closing div-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-
-                
-
+            
             <!-- Right Empty Column -->
             <div class="col-1">
                 <!-- Empty space -->
             </div>
         </div>
     </div>
-
-
 
     <!-- jQuery (required for DataTables) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -641,9 +174,90 @@
     
     <!-- Custom DataTable Initialization -->
     <script src="../js/datatable-init.js"></script>
+    
+    <!-- Modal Handler Script -->
+    <script src="../js/modal-handler.js"></script>
 
-    <!--Javascript for Modal-->
-    <script src="../js/index.js"></script>
+    <!-- Lake Details Modal -->
+    <div class="modal fade" id="lakeModal" tabindex="-1" aria-labelledby="lakeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lakeModalLabel">Lake Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img id="lakeImage" src="" alt="Lake Image" class="img-fluid rounded mb-3 lake-modal-image">
+                            </div>
+                            <div class="col-md-6">
+                                <h6><strong>State:</strong> <span id="lakeState"></span></h6>
+                                <h6><strong>Location:</strong> <span id="lakeLocation"></span></h6>
+                                <p><strong>Description:</strong></p>
+                                <p id="lakeDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Lake Modal Handler Script
+$(document).ready(function() {
+    // Handle lake link clicks
+    $('.lake-link').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        
+        // Get data from the clicked link
+        const lakeName = $(this).data('lake');
+        const lakeState = $(this).data('state');
+        const lakeLocation = $(this).data('location');
+        const lakeDescription = $(this).data('description');
+        const lakeImage = $(this).data('image');
+        
+        // Populate modal with data
+        $('#lakeModalLabel').text(lakeName);
+        $('#lakeState').text(lakeState);
+        $('#lakeLocation').text(lakeLocation);
+        $('#lakeDescription').text(lakeDescription);
+        
+        // Handle image - use placeholder if no image provided
+        if (lakeImage && lakeImage !== '') {
+            $('#lakeImage').attr('src', lakeImage);
+        } else {
+            $('#lakeImage').attr('src', 'https://via.placeholder.com/400x300/6a8b6e/ffffff?text=' + encodeURIComponent(lakeName));
+        }
+        $('#lakeImage').attr('alt', lakeName);
+        
+        // Show the modal
+        $('#lakeModal').modal('show');
+    });
+    
+    // Add smooth animation when modal opens
+    $('#lakeModal').on('show.bs.modal', function () {
+        $(this).find('.modal-dialog').css({
+            'transform': 'scale(0.8)',
+            'opacity': '0'
+        });
+    });
+    
+    $('#lakeModal').on('shown.bs.modal', function () {
+        $(this).find('.modal-dialog').animate({
+            'transform': 'scale(1)',
+            'opacity': '1'
+        }, 200);
+    });
+});
+
+</script>
 
 </body>
 </html>
+

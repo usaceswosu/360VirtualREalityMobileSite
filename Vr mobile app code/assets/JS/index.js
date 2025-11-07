@@ -16,6 +16,8 @@ $(document).ready(function() {
         $('#lakeState').text(lakeState);
         $('#lakeLocation').text(lakeLocation);
         $('#lakeDescription').text(lakeDescription);
+
+        $('#lakeImage').text(lakeImage);
         
         // Handle image - use placeholder if no image provided
         if (lakeImage && lakeImage !== '') {
