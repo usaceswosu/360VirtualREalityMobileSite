@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +13,18 @@
     
     <!-- Custom CSS (load after Bootstrap) -->
     <link rel="stylesheet" href="../Stylesheets/Styles.css">
+
 </head>
 <body>
+
+    <header>
+    </header>
 
     <div class="container-fluid"> 
         <div class="row">
             <!-- Left Empty Column -->
             <div class="col-1">
-                <!-- Empty space for filler/border -->
+                <!-- Empty space -->
             </div>
             
             <!-- Main Content Column -->
@@ -39,17 +43,103 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <!--Arkansas-->
                                     <td>
-                                        <p><a href="#">Beaver Lake</a></p>
-                                        <p><a href="#">Lake Ouachita</a></p>
+
+                                        <!--Beaver Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Beaver Lake" 
+                                            data-state="Arkansas" 
+                                            data-location="Rogers, AR"
+                                            data-description="Beaver Lake is a man-made reservoir in the Ozark Mountains of Northwest Arkansas. Known for its clear water and excellent fishing, the lake offers 28,220 acres of pristine water surrounded by beautiful hardwood forests."
+                                            data-images="../images/Arkansas/Beaver Lake/Dam Site Island Camp.png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (1).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (2).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (3).png"
+                                            data-image-names="Dam Site Island Camp|Shoreline Ranger Hike 1|Shoreline Ranger Hike 2|Shoreline Ranger Hike 3">
+                                            Beaver Lake
+                                        </a></p>
+
+                                        <!--Lake Ouachita-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Lake Ouachita" 
+                                            data-state="Arkansas" 
+                                            data-location="Hot Springs, AR"
+                                            data-description="Lake Ouachita is Arkansas's largest lake, covering 40,000 acres with crystal clear water perfect for recreation. The lake is renowned for its excellent fishing and stunning natural beauty in the Ouachita Mountains."
+                                            data-images="../images/Arkansas/Lake Ouachita/trail1.png|../images/Arkansas/Lake Ouachita/trail2.png"
+                                            data-image-names="Mountain Trail|Lakeside Path">
+                                            Lake Ouachita
+                                        </a></p>
                                     </td>
+
+                                    <!--Georgia-->
                                     <td>
-                                        <p><a href="#">Allatoona Lake</a></p>
-                                        <p><a href="#">Carters Lake</a></p>
+
+                                        <!--Allatona Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Allatoona Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Cartersville, GA"
+                                            data-description="Allatoona Lake offers 12,000 acres of pristine water surrounded by beautiful hardwood forests. This popular recreational destination provides excellent boating, swimming, and fishing opportunities in north Georgia."
+                                            data-images="../images/Georgia/Allatoona Lake/beach-trail.png|../images/Georgia/Allatoona Lake/forest-trail.png"
+                                            data-image-names="Beach Trail|Forest Trail">
+                                            Allatoona Lake
+                                        </a></p>
+
+                                        <!--Carters Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Carters Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Chatsworth, GA"
+                                            data-description="Carters Lake is Georgia's deepest lake, nestled in the Blue Ridge Mountains. With its crystal-clear waters and scenic mountain backdrop, it's a premier destination for outdoor recreation and natural beauty."
+                                            data-images="../images/Georgia/Carters Lake/mountain-view.png"
+                                            data-image-names="Mountain View Trail">
+                                            Carters Lake
+                                        </a></p>
                                     </td>
-                                    <td><p><a href="#">Table Rock Lake</a></p></td>
-                                    <td><p><a href="#">Beech Fork Lake</a></p></td>
-                                    <td><p><a href="#">Alum Creek</a></p></td>
+
+                                    <!--Missouri-->
+                                    <td>
+
+                                        <!--Table Rock Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Table Rock Lake" 
+                                        data-state="Missouri" 
+                                        data-location="Branson, MO"
+                                        data-description="Table Rock Lake spans 43,100 acres with over 800 miles of shoreline in the heart of the Ozarks. Famous for its clear waters and excellent fishing, the lake is a centerpiece of Missouri's outdoor recreation scene."
+                                        data-images="../images/Missouri/Table Rock Lake/ozark-trail.png|../images/Missouri/Table Rock Lake/water-trail.png"
+                                        data-image-names="Ozark Trail|Water Trail">
+                                        Table Rock Lake
+                                        </a></p>
+                                    </td>
+
+                                    <!--Ohio-->
+                                    <td>
+
+                                        <!--Beech Fork Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Beech Fork Lake" 
+                                        data-state="Ohio" 
+                                        data-location="Hillsboro, OH"
+                                        data-description="Beech Fork Lake provides excellent boating and fishing opportunities in southern Ohio. This 720-acre lake offers peaceful waters surrounded by rolling hills and dense forests, perfect for outdoor enthusiasts."
+                                        data-images="../images/Ohio/Beech Fork Lake/hiking-trail.png"
+                                        data-image-names="Hiking Trail">
+                                        Beech Fork Lake
+                                    </a></p>
+                                    </td>
+
+                                    <!--West Virginia-->
+                                    <td>
+
+                                        <!--Alum Creek-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Alum Creek" 
+                                        data-state="West Virginia" 
+                                        data-location="Huntington, WV"
+                                        data-description="Alum Creek offers peaceful waters and scenic views in the hills of West Virginia. This smaller lake provides intimate recreational opportunities with excellent access to nature and wildlife viewing."
+                                        data-images="../images/West Virginia/Alum Creek/nature-trail.png|../images/West Virginia/Alum Creek/creek-trail.png"
+                                        data-image-names="Nature Trail|Creek Trail">
+                                        Alum Creek
+                                    </a></p>
+                                    </td>
+
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -96,6 +186,167 @@
     
     <!-- Custom DataTable Initialization -->
     <script src="../js/datatable-init.js"></script>
+    
+    <!-- Modal Handler Script -->
+    <script src="../js/modal-handler.js"></script>
+
+    <!-- Lake Details Modal -->
+    <div class="modal fade" id="lakeModal" tabindex="-1" aria-labelledby="lakeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lakeModalLabel">Lake Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Image Carousel Container -->
+                                <div id="imageCarousel" class="carousel slide" data-bs-ride="false">
+                                    <div class="carousel-inner" id="imageContainer">
+                                        <!-- Images will be dynamically added here -->
+                                    </div>
+                                    <button class="carousel-control-prev carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                    <div class="carousel-indicators carousel-hidden" id="imageIndicators">
+                                        <!-- Indicators will be dynamically added here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><strong>State:</strong> <span id="lakeState"></span></h6>
+                                <h6><strong>Location:</strong> <span id="lakeLocation"></span></h6>
+                                <p><strong>Description:</strong></p>
+                                <p id="lakeDescription"></p>
+                                <div id="trailsList">
+                                    <p><strong>Available Trails:</strong></p>
+                                    <ul id="trailNames">
+                                        <!-- Trail names will be dynamically added here -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Lake Modal Handler Script
+$(document).ready(function() {
+    // Handle lake link clicks
+    $('.lake-link').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        
+        // Get data from the clicked link
+        const lakeName = $(this).data('lake');
+        const lakeState = $(this).data('state');
+        const lakeLocation = $(this).data('location');
+        const lakeDescription = $(this).data('description');
+        const imagesData = $(this).data('images');
+        const imageNamesData = $(this).data('image-names');
+        
+        // Populate modal with data
+        $('#lakeModalLabel').text(lakeName);
+        $('#lakeState').text(lakeState);
+        $('#lakeLocation').text(lakeLocation);
+        $('#lakeDescription').text(lakeDescription);
+        
+        // Handle multiple images
+        const imageContainer = $('#imageContainer');
+        const indicators = $('#imageIndicators');
+        const trailsList = $('#trailNames');
+        
+        // Clear previous content
+        imageContainer.empty();
+        indicators.empty();
+        trailsList.empty();
+        
+        if (imagesData && imagesData !== '') {
+            const images = imagesData.split('|');
+            const imageNames = imageNamesData ? imageNamesData.split('|') : images.map((_, i) => `Trail ${i + 1}`);
+            
+            // Create carousel slides
+            images.forEach((imageSrc, index) => {
+                const activeClass = index === 0 ? 'active' : '';
+                const imageName = imageNames[index] || `Trail ${index + 1}`;
+                
+                // Add carousel item
+                imageContainer.append(`
+                    <div class="carousel-item ${activeClass}">
+                        <img src="${imageSrc}" class="d-block w-100 lake-modal-image" alt="${imageName}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>${imageName}</h5>
+                        </div>
+                    </div>
+                `);
+                
+                // Add indicator
+                indicators.append(`
+                    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="${index}" 
+                            class="${activeClass}" aria-label="Slide ${index + 1}"></button>
+                `);
+                
+                // Add trail name to list
+                trailsList.append(`<li>${imageName}</li>`);
+            });
+            
+            // Show/hide carousel controls based on number of images
+            if (images.length > 1) {
+                $('.carousel-control-prev, .carousel-control-next, #imageIndicators').removeClass('carousel-hidden');
+            } else {
+                $('.carousel-control-prev, .carousel-control-next, #imageIndicators').addClass('carousel-hidden');
+            }
+            
+        } else {
+            // No images available
+            imageContainer.html(`
+                <div class="carousel-item active">
+                    <div class="d-flex align-items-center justify-content-center lake-modal-image bg-light">
+                        <div class="text-center text-muted">
+                            <i class="fas fa-mountain fa-3x mb-3"></i>
+                            <h5>No Images Available</h5>
+                            <p>Images for ${lakeName} will be available soon.</p>
+                        </div>
+                    </div>
+                </div>
+            `);
+            $('.carousel-control-prev, .carousel-control-next, #imageIndicators').addClass('carousel-hidden');
+            $('#trailsList').hide();
+        }
+        
+        // Show the modal
+        $('#lakeModal').modal('show');
+    });
+    
+    // Add smooth animation when modal opens
+    $('#lakeModal').on('show.bs.modal', function () {
+        $(this).find('.modal-dialog').css({
+            'transform': 'scale(0.8)',
+            'opacity': '0'
+        });
+    });
+    
+    $('#lakeModal').on('shown.bs.modal', function () {
+        $(this).find('.modal-dialog').animate({
+            'transform': 'scale(1)',
+            'opacity': '1'
+        }, 200);
+    });
+});
+
+</script>
 
 </body>
 </html>
