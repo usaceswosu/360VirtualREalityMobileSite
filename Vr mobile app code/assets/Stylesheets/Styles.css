@@ -1,8 +1,14 @@
-/* Basic reset and Bootstrap grid fixes */
+@font-face {
+    font-family: 'Mick-CasterScript';
+    src: url(../fonts/mick-caster/Mick\ Caster.ttf) format('truetype');
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #dee2e6; /* Change this color to whatever you want */
+    margin: 0px;
+    font-family: 'Mick-CasterScript', sans-serif;
+    background-image: url('../images/forest.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .container-fluid {
@@ -30,37 +36,17 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgb(66, 99, 70), rgb(35, 56, 37)); /* Diagonal green gradient */ /*106,139,110 to 75,96,77 for first option*/
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
-}
-
-/* Responsive DataTable */
-@media (max-width: 768px) {
-    .content {
-        padding: 10px;
-    }
-    
-    .table-container {
-        padding: 15px;
-    }
-    
-    /* Make table more mobile-friendly */
-    table.dataTable {
-        font-size: 14px;
-    }
-    
-    .dataTables_wrapper .dataTables_filter input {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
 }
 
 /* Custom Table Footer Styling */
 .table-footer {
-    background-color: #f8f9fa !important;
-    border-top: 2px solid #dee2e6 !important;
+    background-color: #ffeac1 !important;
+    border-top: 2px solid #a3a6a9 !important;
+    border-bottom: 2px solid #a3a6a9 !important;
     padding: 15px !important;
 }
 
@@ -91,16 +77,206 @@ body {
     gap: 8px;
 }
 
-.crop {
-    width: 60px; /* Set the desired width */
-    height: 50px; /* Set the desired height */
+.crop { /* Class to crop logo image */
+    width: 60px;
+    height: 45px; 
     overflow: hidden; /* Hide any overflow */
-    border-radius: 15%; /* Make it circular */
+    border-radius: 10%; /* Make it circular */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.table tbody td a {
+    color: #606060;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block; /* Required for transforms to work for text */
+    transition: all 0.3s ease;
+}
+
+.table tbody td a:hover {
+    color: #212121; /*212121 for darker on hover*/
+    text-decoration: underline;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+
+/* Custom ball/handle styling for toggle switch */
+.form-check-input {
+    background-color: rgb(106, 139, 110);           /* Off state background (green) */
+    border-color: #6c757d;               /* Off state border */
+    position: relative;                  /* Needed for positioning the ball */
+}
+
+.form-check-input:checked {
+    background-color: rgb(106, 139, 110);           /* On state background (green) */
+    border-color: #6c757d;               /* On state border */
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(10, 146, 0, 0.416) !important; /* Focus glow */
+    border-color: #6c757d !important;
+    outline: none !important;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
+}
+
+/* Style the ball/handle */
+.form-check-input::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: #d6d2c8;           /* Light cream ball when OFF */
+    border: 1px solid #a3a6a9;          /* Light border */
+    border-radius: 50%;
+    left: 2px;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-input:checked::before {
+    left: calc(100% - 16px);             /* Move ball to right when toggled */
+    background-color: #d6d2c8;           /* Cream color when ON */
+    border-color: #a3a6a9;               /* Darker border when ON */
+}
+
+
+
+/* Mobile Card-Style Table Layout */
+@media (max-width: 992px) {
+    /* Hide the original table headers on mobile */
+    .table thead {
+        display: none;
+    }
+
+    .toggle-label {
+        font-size: 20px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
+    
+    .form-check-label {
+        font-size: 22px;
+    }
+    .table-container {
+        max-width: 500px; /* ← Smaller container */
+    }
+    /* Make table rows display as cards */
+    .table tbody tr {
+        display: block;
+        border: 2px solid #969696;
+        background-color: #d6d2c8;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
+        max-width: 500px;
+    }
+    
+    /* Make each cell a block element with label */
+    .table tbody td {
+        display: block;
+        border: none;
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 2px solid #969696;
+        background-color: #f6faf6;
+        border-radius: 5px;
+        white-space: nowrap;
+        text-align: center;        /* ← Centers the text horizontally */
+    }
+    
+    /* Add labels before each cell content */
+    .table tbody td:nth-child(1):before { content: "Arkansas "; }
+    .table tbody td:nth-child(2):before { content: "Georgia "; }
+    .table tbody td:nth-child(3):before { content: "Missouri "; }
+    .table tbody td:nth-child(4):before { content: "Ohio "; }
+    .table tbody td:nth-child(5):before { content: "West Virginia "; }
+    
+    /* Style the labels */
+    .table tbody td:before {
+
+        font-weight: bold;
+        color: #495057;
+        display: inline-block;
+        width: auto;
+        font-size: 25px;
+        margin-right: 10px; /* Space between label and content */
+    }
+    
+    /* Hide empty cells on mobile */
+    .table tbody td:empty {
+        display: none;
+    }
+    
+    /* Adjust footer for mobile */
+    .table tfoot {
+        display: block;
+    }
+    
+    .table tfoot tr {
+        display: block;
+    }
+    
+    .table tfoot th {
+        display: block;
+        border: none;
+    }
+    .form-check-input::before {
+        width: 14px; /* Slightly bigger ball for tablet view to match toggle switch */
+        height: 14px;
+        bottom: 2px; /* Adjust ball position to align better for tablet view */
+    }
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+
+
+    .lake-modal-image {
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {  /* Further adjustments for VERY small screens */
+   .table tbody td {
+       padding: 15px;
+       font-size: 14px;
+       white-space: normal; /* Allow text to wrap */
+       word-break: break-word;
+   }
+   .table tbody td:before {
+       font-size: 15px;
+   }
+
+   .toggle-label {
+        font-size: 15px;
+    }
+    .form-check-input {
+        height: 15px;
+    }
+    
+    .form-check-label {
+        font-size: 17px;
+    }
+    .form-check-input::before {
+        width: 13px; /* S lightly smaller ball for mobile view */
+        height: 13px;
+        bottom: 0px; /* Adjust ball position to align better for mobile view */
+        transform: translateX(1px); /* Slightly adjust ball position */
+    }
+}
 /* Mobile Card-Style Table Layout */
 @media (max-width: 576px) {
     /* Hide the original table headers on mobile */
@@ -267,25 +443,4 @@ body {
 .modal-body p {
     font-size: 1.1rem;
     line-height: 1.5;
-}
-
-/* Responsive modal adjustments */
-@media (max-width: 768px) {
-    .modal-dialog {
-        margin: 10px;
-    }
-    
-    .modal-title {
-        font-size: 1.5rem;
-    }
-    
-    .modal-body {
-        padding: 1rem;
-    }
-}
-
-.lake-modal-image {
-    max-height: 300px;
-    width: 100%;
-    object-fit: cover;
 }

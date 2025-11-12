@@ -16,8 +16,11 @@ $(document).ready(function() {
         $('#lakeState').text(lakeState);
         $('#lakeLocation').text(lakeLocation);
         $('#lakeDescription').text(lakeDescription);
+<<<<<<< HEAD
 
         $('#lakeImage').text(lakeImage);
+=======
+>>>>>>> dillon
         
         // Handle image - use placeholder if no image provided
         if (lakeImage && lakeImage !== '') {
@@ -61,4 +64,8 @@ $(document).ready(function() {
             'opacity': '1'
         }, 200);
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> dillon

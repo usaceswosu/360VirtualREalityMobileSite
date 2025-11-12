@@ -21,7 +21,11 @@ const imageList = [
   "Dam and Overlook.png",
   "Dam Site Island Camp.png",
   "Dewey Short Visitory Center.png",
+<<<<<<< HEAD
   "Geo FIsh Shelter and H Checkerboard Point.png",
+=======
+  "Geo Fish Shelter and H Checkerboard Point.png",
+>>>>>>> dillon
   "Hickory Nut Mountain.png",
   "Low Water Wilderness Den.png",
   "Mother Natures Beach (2).png",
