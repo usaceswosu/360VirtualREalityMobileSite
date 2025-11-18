@@ -17,11 +17,14 @@
 </head>
 <body>
 
+    <header>
+    </header>
+
     <div class="container-fluid"> 
         <div class="row">
             <!-- Left Empty Column -->
             <div class="col-1">
-                <!-- Empty space for filler/border -->
+                <!-- Empty space -->
             </div>
             
             <!-- Main Content Column -->
@@ -40,17 +43,122 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <!--Arkansas-->
                                     <td>
-                                        <p><a href="#">Beaver Lake</a></p>
-                                        <p><a href="#">Lake Ouachita</a></p>
+
+                                        <!--Beaver Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Beaver Lake" 
+                                            data-state="Arkansas" 
+                                            data-location="Rogers, AR"
+                                            data-images="../images/Arkansas/Beaver Lake/Dam Site Island Camp.png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (1).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (2).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (3).png"
+                                            data-image-names="Dam Site Island Camp|Shoreline Ranger Hike 1|Shoreline Ranger Hike 2|Shoreline Ranger Hike 3"
+                                            data-images-links="https://www.youtube.com/watch?v=g8gGlYtr96I|https://www.youtube.com/watch?v=zLRp9cXnNfo|https://www.youtube.com/watch?v=Ct_PFVvB5Y0|https://www.youtube.com/watch?v=xqgnPojbdZU"
+                                            onclick="myFunction()"
+                                            >
+                                            Beaver Lake
+                                        </a></p>
+
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                let links = [
+                                                    'https://www.youtube.com/watch?v=g8gGlYtr96I',
+                                                    'https://www.youtube.com/watch?v=zLRp9cXnNfo',
+                                                    'https://www.youtube.com/watch?v=Ct_PFVvB5Y0',
+                                                    'https://www.youtube.com/watch?v=xqgnPojbdZU',
+
+                                                ];
+                                            
+                                                document.body.addEventListener('click', function (e) {
+                                                    if (e.target.closest('.carousel-links .swiper-slide')){
+                                                    let i = e.target.closest('.swiper-slide').getAttribute("data-swiper-slide-index");
+                                                    if (links[i] && links[i].length > 2){
+                                                    window.open(links[i]);
+                                                    }
+                                                    }
+                                                });
+                                            });
+                                            
+
+                                        </script>
+
+                                        <!--Lake Ouachita-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Lake Ouachita" 
+                                            data-state="Arkansas" 
+                                            data-location="Hot Springs, AR"
+                                            data-images="../images/Arkansas/Lake Ouachita/trail1.png|../images/Arkansas/Lake Ouachita/trail2.png"
+                                            data-image-names="Mountain Trail|Lakeside Path">
+                                            Lake Ouachita
+                                        </a></p>
                                     </td>
+
+                                    <!--Georgia-->
                                     <td>
-                                        <p><a href="#">Allatoona Lake</a></p>
-                                        <p><a href="#">Carters Lake</a></p>
+
+                                        <!--Allatona Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Allatoona Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Cartersville, GA"
+                                            data-images="../images/Georgia/Allatoona Lake/beach-trail.png|../images/Georgia/Allatoona Lake/forest-trail.png"
+                                            data-image-names="Beach Trail|Forest Trail">
+                                            Allatoona Lake
+                                        </a></p>
+
+                                        <!--Carters Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                            data-lake="Carters Lake" 
+                                            data-state="Georgia" 
+                                            data-location="Chatsworth, GA"
+                                            data-images="../images/Georgia/Carters Lake/mountain-view.png"
+                                            data-image-names="Mountain View Trail">
+                                            Carters Lake
+                                        </a></p>
                                     </td>
-                                    <td><p><a href="#">Table Rock Lake</a></p></td>
-                                    <td><p><a href="#">Beech Fork Lake</a></p></td>
-                                    <td><p><a href="#">Alum Creek</a></p></td>
+
+                                    <!--Missouri-->
+                                    <td>
+
+                                        <!--Table Rock Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Table Rock Lake" 
+                                        data-state="Missouri" 
+                                        data-location="Branson, MO"
+                                        data-images="../images/Missouri/Table Rock Lake/ozark-trail.png|../images/Missouri/Table Rock Lake/water-trail.png"
+                                        data-image-names="Ozark Trail|Water Trail">
+                                        Table Rock Lake
+                                        </a></p>
+                                    </td>
+
+                                    <!--Ohio-->
+                                    <td>
+
+                                        <!--Beech Fork Lake-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Beech Fork Lake" 
+                                        data-state="Ohio" 
+                                        data-location="Hillsboro, OH"
+                                        data-images="../images/Ohio/Beech Fork Lake/hiking-trail.png"
+                                        data-image-names="Hiking Trail">
+                                        Beech Fork Lake
+                                    </a></p>
+                                    </td>
+
+                                    <!--West Virginia-->
+                                    <td>
+
+                                        <!--Alum Creek-->
+                                        <p><a href="#" class="lake-link" 
+                                        data-lake="Alum Creek" 
+                                        data-state="West Virginia" 
+                                        data-location="Huntington, WV"
+                                        data-images="../images/West Virginia/Alum Creek/nature-trail.png|../images/West Virginia/Alum Creek/creek-trail.png"
+                                        data-image-names="Nature Trail|Creek Trail">
+                                        Alum Creek
+                                    </a></p>
+                                    </td>
+
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -106,20 +214,55 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
+
                     <h5 class="modal-title" id="lakeModalLabel">Lake Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <img id="lakeImage" src="" alt="Lake Image" class="img-fluid rounded mb-3 lake-modal-image">
+                                <img id="lakeImage" src="#" alt="Lake Image" class="img-fluid rounded mb-3 lake-modal-image">
+                                
+                                <!-- Image Carousel Container -->
+                                <div id="imageCarousel" class="carousel slide" data-bs-ride="false">
+                                    <div class="carousel-inner" id="imageContainer">
+                                        <!-- Images will be dynamically added here -->
+                                    </div>
+
+                                    <button class="carousel-control-prev carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+
+                                    <button class="carousel-control-next carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+
+                                    <div class="carousel-indicators carousel-hidden" id="imageIndicators" data-images-links="#">
+                                        <!-- Indicators will be dynamically added here -->
+                                    </div>
+
+                                </div>
+
+
                             </div>
                             <div class="col-md-6">
                                 <h6><strong>State:</strong> <span id="lakeState"></span></h6>
                                 <h6><strong>Location:</strong> <span id="lakeLocation"></span></h6>
                                 <p><strong>Description:</strong></p>
+
                                 <p id="lakeDescription"></p>
+                                <div id="trailsList">
+
+                                    <p><strong>Available Trails:</strong></p>
+                                    <ul id="trailNames">
+                                        <!-- Trail names will be dynamically added here -->
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -142,14 +285,14 @@ $(document).ready(function() {
         const lakeName = $(this).data('lake');
         const lakeState = $(this).data('state');
         const lakeLocation = $(this).data('location');
-        const lakeDescription = $(this).data('description');
         const lakeImage = $(this).data('image');
+        const imagesData = $(this).data('images');
+        const imageNamesData = $(this).data('image-names');
         
         // Populate modal with data
         $('#lakeModalLabel').text(lakeName);
         $('#lakeState').text(lakeState);
         $('#lakeLocation').text(lakeLocation);
-        $('#lakeDescription').text(lakeDescription);
 
         
         // Handle image - use placeholder if no image provided
@@ -159,6 +302,69 @@ $(document).ready(function() {
             $('#lakeImage').attr('src', 'https://via.placeholder.com/400x300/6a8b6e/ffffff?text=' + encodeURIComponent(lakeName));
         }
         $('#lakeImage').attr('alt', lakeName);
+        
+        // Handle multiple images
+        const imageContainer = $('#imageContainer');
+        const indicators = $('#imageIndicators');
+        const trailsList = $('#trailNames');
+        
+        // Clear previous content
+        imageContainer.empty();
+        indicators.empty();
+        trailsList.empty();
+        
+        if (imagesData && imagesData !== '') {
+            const images = imagesData.split('|');
+            const imageNames = imageNamesData ? imageNamesData.split('|') : images.map((_, i) => `Trail ${i + 1}`);
+            
+            // Create carousel slides
+            images.forEach((imageSrc, index) => {
+                const activeClass = index === 0 ? 'active' : '';
+                const imageName = imageNames[index] || `Trail ${index + 1}`;
+                
+                // Add carousel item
+                imageContainer.append(`
+                    <div class="carousel-item ${activeClass}">
+                        <img src="${imageSrc}" class="d-block w-100 lake-modal-image" alt="${imageName}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>${imageName}</h5>
+                        </div>
+                    </div>
+                `);
+                
+                // Add indicator
+                indicators.append(`
+                    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="${index}" 
+                            class="${activeClass}" aria-label="Slide ${index + 1}"></button>
+                `);
+                
+                // Add trail name to list
+                trailsList.append(`<li>${imageName}</li>`);
+            });
+            
+            // Show/hide carousel controls based on number of images
+            if (images.length > 1) {
+                $('.carousel-control-prev, .carousel-control-next, #imageIndicators').removeClass('carousel-hidden');
+            } else {
+                $('.carousel-control-prev, .carousel-control-next, #imageIndicators').addClass('carousel-hidden');
+            }
+            
+        } else {
+            // No images available
+            imageContainer.html(`
+                <div class="carousel-item active">
+                    <div class="d-flex align-items-center justify-content-center lake-modal-image bg-light">
+                        <div class="text-center text-muted">
+                            <i class="fas fa-mountain fa-3x mb-3"></i>
+                            <h5>No Images Available</h5>
+                            <p>Images for ${lakeName} will be available soon.</p>
+                        </div>
+                    </div>
+                </div>
+            `);
+            $('.carousel-control-prev, .carousel-control-next, #imageIndicators').addClass('carousel-hidden');
+            $('#trailsList').hide();
+        }
         
         // Show the modal
         $('#lakeModal').modal('show');
@@ -179,6 +385,10 @@ $(document).ready(function() {
         }, 200);
     });
 });
+
+
+
+
 
 </script>
 

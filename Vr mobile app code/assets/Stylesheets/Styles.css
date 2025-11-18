@@ -444,3 +444,43 @@ body {
     font-size: 1.1rem;
     line-height: 1.5;
 }
+
+/* Carousel Controls for Modal */
+.carousel-hidden {
+    display: none !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(106, 139, 110, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(106, 139, 110, 0.6);
+}
+
+.carousel-indicators button {
+    background-color: #6a8b6e;
+    border: 2px solid #4b604d;
+}
+
+.carousel-indicators button.active {
+    background-color: #4b604d;
+}
+
+.carousel-caption {
+    background-color: rgba(75, 96, 77, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-caption h5 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
