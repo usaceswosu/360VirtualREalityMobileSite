@@ -46,41 +46,47 @@
                                     <!--Arkansas-->
                                     <td>
 
+                                        <script>
+                                           function urlChange(){
+                                            const images = document.querySelectorAll('data-images');
+                                            const imageList = images.split('|');
+
+                                            const urlAttatchment = [
+                                                'https://www.youtube.com/watch?v=g8gGlYtr96I',
+                                                'https://www.youtube.com/watch?v=zLRp9cXnNfo',
+                                                'https://www.youtube.com/watch?v=Ct_PFVvB5Y0',
+                                                'https://www.youtube.com/watch?v=xqgnPojbdZU',
+                                            ];
+
+                                            images.forEach((image, index) => {
+
+                                                if(urlAttatchment[index]) {
+                                                    data-images.src == urlAttatchment[index]
+                                                }else{
+                                                    console.warn(`No new URL provided for image at index ${index}.`);
+                                                }
+                                            })
+
+                                            beaverLake.addEventListener("click", urlChange);
+
+                                           }
+
+                                        </script>
+
                                         <!--Beaver Lake-->
-                                        <p><a href="#" class="lake-link" 
+                                        <p><a href="#" class="lake-link"  id="beaverLake"
                                             data-lake="Beaver Lake" 
                                             data-state="Arkansas" 
                                             data-location="Rogers, AR"
                                             data-images="../images/Arkansas/Beaver Lake/Dam Site Island Camp.png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (1).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (2).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (3).png"
                                             data-image-names="Dam Site Island Camp|Shoreline Ranger Hike 1|Shoreline Ranger Hike 2|Shoreline Ranger Hike 3"
                                             data-images-links="https://www.youtube.com/watch?v=g8gGlYtr96I|https://www.youtube.com/watch?v=zLRp9cXnNfo|https://www.youtube.com/watch?v=Ct_PFVvB5Y0|https://www.youtube.com/watch?v=xqgnPojbdZU"
-                                            onclick="myFunction()"
+                                            onclick="urlChange()"
                                             >
                                             Beaver Lake
                                         </a></p>
 
-                                        <script>
-                                            document.addEventListener('DOMContentLoaded', function () {
-                                                let links = [
-                                                    'https://www.youtube.com/watch?v=g8gGlYtr96I',
-                                                    'https://www.youtube.com/watch?v=zLRp9cXnNfo',
-                                                    'https://www.youtube.com/watch?v=Ct_PFVvB5Y0',
-                                                    'https://www.youtube.com/watch?v=xqgnPojbdZU',
-
-                                                ];
-                                            
-                                                document.body.addEventListener('click', function (e) {
-                                                    if (e.target.closest('.carousel-links .swiper-slide')){
-                                                    let i = e.target.closest('.swiper-slide').getAttribute("data-swiper-slide-index");
-                                                    if (links[i] && links[i].length > 2){
-                                                    window.open(links[i]);
-                                                    }
-                                                    }
-                                                });
-                                            });
-                                            
-
-                                        </script>
+                                        
 
                                         <!--Lake Ouachita-->
                                         <p><a href="#" class="lake-link" 
