@@ -187,7 +187,7 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-12">
                                 <!-- Image Carousel Container -->
                                 <div id="imageCarousel" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-inner" id="imageContainer">
@@ -206,7 +206,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-12 mt-3">
                                 <h6><strong>State:</strong> <span id="lakeState"></span></h6>
                                 <div id="trailsList">
                                     <p><strong>Available Trails:</strong></p>
@@ -265,7 +265,7 @@ $(document).ready(function() {
                 imageContainer.append(`
                     <div class="carousel-item ${activeClass}">
                         <img src="${imageSrc}" class="d-block w-100 lake-modal-image" alt="${imageName}">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption">
                             <h5>${imageName}</h5>
                         </div>
                     </div>
