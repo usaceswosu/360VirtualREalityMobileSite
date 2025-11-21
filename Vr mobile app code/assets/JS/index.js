@@ -7,15 +7,11 @@ $(document).ready(function() {
         // Get data from the clicked link
         const lakeName = $(this).data('lake');
         const lakeState = $(this).data('state');
-        const lakeLocation = $(this).data('location');
-        const lakeDescription = $(this).data('description');
         const lakeImage = $(this).data('image');
         
         // Populate modal with data
         $('#lakeModalLabel').text(lakeName);
         $('#lakeState').text(lakeState);
-        $('#lakeLocation').text(lakeLocation);
-        $('#lakeDescription').text(lakeDescription);
         
         // Handle image - use placeholder if no image provided
         if (lakeImage && lakeImage !== '') {
@@ -27,22 +23,6 @@ $(document).ready(function() {
         
         // Show the modal
         $('#lakeModal').modal('show');
-    });
-    
-    // Handle 360° view button
-    $('#view360Btn').on('click', function() {
-        const lakeName = $('#lakeModalLabel').text();
-        alert(`Opening 360° view for ${lakeName}\n\nThis feature will be implemented with your VR content!`);
-        // Add your 360° view logic here
-        // Example: window.open('360-viewer.html?lake=' + encodeURIComponent(lakeName), '_blank');
-    });
-    
-    // Handle VR view button
-    $('#viewVRBtn').on('click', function() {
-        const lakeName = $('#lakeModalLabel').text();
-        alert(`Opening VR experience for ${lakeName}\n\nThis feature will connect to your VR application!`);
-        // Add your VR view logic here
-        // Example: window.location.href = 'vr-experience.html?lake=' + encodeURIComponent(lakeName);
     });
     
     // Add smooth animation when modal opens

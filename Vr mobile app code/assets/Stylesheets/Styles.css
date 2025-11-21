@@ -141,7 +141,9 @@ body {
     border-color: #a3a6a9;               /* Darker border when ON */
 }
 
-
+.modal{
+    --bs-modal-width: 100%;
+}
 
 /* Mobile Card-Style Table Layout */
 @media (max-width: 992px) {
@@ -229,6 +231,7 @@ body {
         height: 14px;
         bottom: 2px; /* Adjust ball position to align better for tablet view */
     }
+
     .modal-dialog {
         margin: 10px;
     }
@@ -250,16 +253,27 @@ body {
 }
 
 @media (max-width: 576px) {  /* Further adjustments for VERY small screens */
+   /* Table and cell styling */
    .table tbody td {
        padding: 15px;
        font-size: 14px;
        white-space: normal; /* Allow text to wrap */
        word-break: break-word;
+       display: block;
+       border: none;
+       border-bottom: 1px solid #969696;
    }
+   
    .table tbody td:before {
        font-size: 15px;
+       font-weight: bold;
+       color: #495057;
+       display: inline-block;
+       width: 120px;
+       margin-right: 10px;
    }
 
+   /* Toggle controls */
    .toggle-label {
         font-size: 15px;
     }
@@ -271,20 +285,17 @@ body {
         font-size: 17px;
     }
     .form-check-input::before {
-        width: 13px; /* S lightly smaller ball for mobile view */
+        width: 13px; /* Slightly smaller ball for mobile view */
         height: 13px;
         bottom: 0px; /* Adjust ball position to align better for mobile view */
         transform: translateX(1px); /* Slightly adjust ball position */
     }
-}
-/* Mobile Card-Style Table Layout */
-@media (max-width: 576px) {
-    /* Hide the original table headers on mobile */
+
+    /* Table structure for mobile cards */
     .table thead {
         display: none;
     }
     
-    /* Make table rows display as cards */
     .table tbody tr {
         display: block;
         border: 2px solid #969696;
@@ -294,29 +305,12 @@ body {
         box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
     }
     
-    /* Make each cell a block element with label */
-    .table tbody td {
-        display: block;
-        border: none;
-        padding: 15px;
-        border-bottom: 1px solid #969696;
-    }
-    
     /* Add labels before each cell content */
     .table tbody td:nth-child(1):before { content: "Arkansas: "; }
     .table tbody td:nth-child(2):before { content: "Georgia: "; }
     .table tbody td:nth-child(3):before { content: "Missouri: "; }
     .table tbody td:nth-child(4):before { content: "Ohio: "; }
     .table tbody td:nth-child(5):before { content: "West Virginia: "; }
-    
-    /* Style the labels */
-    .table tbody td:before {
-        font-weight: bold;
-        color: #495057;
-        display: inline-block;
-        width: 120px;
-        margin-right: 10px;
-    }
     
     /* Hide empty cells on mobile */
     .table tbody td:empty {
@@ -340,6 +334,18 @@ body {
     .table tfoot th {
         display: block;
         border: none;
+    }
+
+    /* Carousel styling */
+    .carousel-caption {
+        background-color: rgba(75, 96, 77, 0.8);
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .carousel-caption h5 {
+        font-family: 'Mick-CasterScript', sans-serif;
+        font-size: 0.9rem;
     }
 }
 
@@ -482,5 +488,4 @@ body {
 .carousel-caption h5 {
     font-family: 'Mick-CasterScript', sans-serif;
     font-size: 1.2rem;
-    margin-bottom: 0;
 }
