@@ -80,11 +80,42 @@
                                             data-location="Rogers, AR"
                                             data-images="../images/Arkansas/Beaver Lake/Dam Site Island Camp.png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (1).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (2).png|../images/Arkansas/Beaver Lake/Shoreline Ranger Hike (3).png"
                                             data-image-names="Dam Site Island Camp|Shoreline Ranger Hike 1|Shoreline Ranger Hike 2|Shoreline Ranger Hike 3"
-                                            data-images-links="https://www.youtube.com/watch?v=g8gGlYtr96I|https://www.youtube.com/watch?v=zLRp9cXnNfo|https://www.youtube.com/watch?v=Ct_PFVvB5Y0|https://www.youtube.com/watch?v=xqgnPojbdZU"
-                                            onclick="urlChange()"
+                                            data-link="https://www.youtube.com/watch?v=g8gGlYtr96I|https://www.youtube.com/watch?v=zLRp9cXnNfo|https://www.youtube.com/watch?v=Ct_PFVvB5Y0|https://www.youtube.com/watch?v=xqgnPojbdZU"
+                                            
+                                            
                                             >
                                             Beaver Lake
                                         </a></p>
+
+                                        <script>
+                                            function urlChangeTwo(){
+                                                window.location.href = 'https://www.youtube.com/watch?v=g8gGlYtr96I';
+                                            }
+
+                                        </script>
+
+                                        <!--Sky's Javascript-->
+                                        <!--Should open up youtube links when Image is clicked, javascript is fully functional - currently should be an HTML issue with attributes-->
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                            const images = document.querySelectorAll("img[data-link]");
+
+                                            images.forEach(img => {
+                                                img.style.cursor = "pointer";
+
+                                                img.addEventListener("click", function () {
+                                                    const link = this.getAttribute("data-link");
+                                                    if (link) {
+                                                        window.location.href = link;
+                                                    }
+                                                });
+                                            });
+                                        });
+
+                                        </script>
+
+
+                                    
 
                                         
 

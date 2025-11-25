@@ -13,3 +13,24 @@ thumbnails.forEach(item => {
 
   container.appendChild(btn);
 });
+
+
+
+//Sky's Javascript
+//Should open up youtube links when Image is clicked, javascript is fully functional - currently should be an HTML issue with attributes
+                                       
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll("img[data-link]");
+
+    images.forEach(img => {
+        img.style.cursor = "pointer";
+
+        img.addEventListener("click", function () {
+            const link = this.getAttribute("data-link");
+            if (link) {
+                window.location.href = link;
+            }
+        });
+    });
+});
