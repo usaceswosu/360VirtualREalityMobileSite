@@ -116,45 +116,6 @@ h4 {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth */
 }
 
-/* Custom ball/handle styling for toggle switch */
-.form-check-input {
-    background-color: rgb(106, 139, 110);           /* Off state background (green) */
-    border-color: #6c757d;               /* Off state border */
-    position: relative;                  /* Needed for positioning the ball */
-}
-
-.form-check-input:checked {
-    background-color: rgb(106, 139, 110);           /* On state background (green) */
-    border-color: #6c757d;               /* On state border */
-}
-
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.2rem rgba(10, 146, 0, 0.416) !important; /* Focus glow */
-    border-color: #6c757d !important;
-    outline: none !important;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
-}
-
-/* Style the ball/handle */
-.form-check-input::before {
-    content: '';
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background-color: #d6d2c8;           /* Light cream ball when OFF */
-    border: 1px solid #a3a6a9;          /* Light border */
-    border-radius: 50%;
-    left: 2px;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 2.55);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.form-check-input:checked::before {
-    left: calc(100% - 16px);             /* Move ball to right when toggled */
-    background-color: #d6d2c8;           /* Cream color when ON */
-    border-color: #a3a6a9;               /* Darker border when ON */
-}
-
 .modal{
     --bs-modal-width: 100%;
 }
@@ -350,6 +311,8 @@ h4 {
         font-family: 'Mick-CasterScript', sans-serif;
         font-size: 0.9rem;
     }
+
+/* For images in modal */    
 }
 img{
     border-radius: 15px;
@@ -400,31 +363,6 @@ img{
 .modal-footer {
     border-top: 2px solid #6a8b6e;
     background-color: #ffeac1;
-}
-
-#view360Btn {
-    background-color: #6a8b6e;
-    border-color: #4b604d;
-    font-family: 'Mick-CasterScript', sans-serif;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-#view360Btn:hover {
-    background-color: #4b604d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#viewVRBtn {
-    font-family: 'Mick-CasterScript', sans-serif;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-#viewVRBtn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Carousel Controls for Modal */
