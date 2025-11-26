@@ -1,7 +1,8 @@
-@font-face {
+/*Uncomment the lines below if you actually want a COOL font*/
+/*@font-face {
     font-family: 'Mick-CasterScript';
     src: url(../fonts/mick-caster/Mick\ Caster.ttf) format('truetype');
-}
+}*/
 
 body {
     margin: 0px;
@@ -370,6 +371,17 @@ img{
 .modal-body {
     padding: 2rem;
     font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.2rem;
+}
+
+.modal-body h6 {
+    color: #4b604d;
+    font-size: 1.5rem;
+}
+
+.modal-body p {
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 .modal-footer {
@@ -400,16 +412,6 @@ img{
 #viewVRBtn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-body h6 {
-    color: #4b604d;
-    font-size: 1.2rem;
-}
-
-.modal-body p {
-    font-size: 1.1rem;
-    line-height: 1.5;
 }
 
 /* Carousel Controls for Modal */
@@ -449,4 +451,9 @@ img{
 .carousel-caption h5 {
     font-family: 'Mick-CasterScript', sans-serif;
     font-size: 1.2rem;
+}
+
+.carousel-caption a {
+    color: white;
+    text-decoration: underline;
 }
