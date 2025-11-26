@@ -11,6 +11,19 @@ body {
     background-size: cover;
     background-position: center;
 }
+h1 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 5px 5px 8px;
+}
+h4 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: black 3px 3px 5px;
+}
 
 .container-fluid {
     padding: 0; /* Remove default Bootstrap padding */
