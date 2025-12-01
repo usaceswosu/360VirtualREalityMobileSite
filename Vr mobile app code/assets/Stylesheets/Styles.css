@@ -344,6 +344,14 @@ img{
     font-size: 1.2rem;
 }
 
+.btn-secondary {
+    background-color: #6a8b6e;
+}
+
+.btn-secondary:hover {
+    background-color: #4b604d;
+}
+
 .modal-body {
     padding: 2rem;
     font-family: 'Mick-CasterScript', sans-serif;

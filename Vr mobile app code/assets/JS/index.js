@@ -1,19 +1,19 @@
-// Lake Modal Handler Script
+// trail Modal Handler Script
 $(document).ready(function() {
-    // Handle lake link clicks
-    $('.lake-link').on('click', function(e) {
+    // Handle trail link clicks
+    $('.trail-link').on('click', function(e) {
         e.preventDefault(); // Prevent default link behavior
 
         // Get data from the clicked link
-        const lakeName = $(this).data('lake');
-        const lakeState = $(this).data('state');
+        const trailName = $(this).data('trail');
+        const trailState = $(this).data('state');
         const imagesData = $(this).data('images');
         const imageNamesData = $(this).data('image-names');
         const videoUrlsData = $(this).data('video-urls');
 
         // Populate modal with data
-        $('#lakeModalLabel').text(lakeName);
-        $('#lakeState').text(lakeState);
+        $('#trailModalLabel').text(trailName);
+        $('#trailState').text(trailState);
 
         // Handle multiple images
         const imageContainer = $('#imageContainer');
@@ -39,11 +39,11 @@ $(document).ready(function() {
                 // Add carousel item with image name as a link if videoUrl exists
                 imageContainer.append(`
                     <div class="carousel-item ${activeClass}">
-                        <img src="${imageSrc}" class="d-block w-100 lake-modal-image" alt="${imageName}">
+                        <img src="${imageSrc}" class="d-block w-100 trail-modal-image" alt="${imageName}">
                         <div class="carousel-caption">
                             ${
                                 videoUrl
-                                ? `<h5><a href="${videoUrl}" target="_blank" class="lake-caption-link">${imageName}</a></h5>`
+                                ? `<h5><a href="${videoUrl}" target="_blank" class="trail-caption-link">${imageName}</a></h5>`
                                 : `<h5>${imageName}</h5>`
                             }
                         </div>
@@ -71,11 +71,11 @@ $(document).ready(function() {
             // No images available
             imageContainer.html(`
                 <div class="carousel-item active">
-                    <div class="d-flex align-items-center justify-content-center lake-modal-image bg-light">
+                    <div class="d-flex align-items-center justify-content-center trail-modal-image bg-light">
                         <div class="text-center text-muted">
                             <i class="fas fa-mountain fa-3x mb-3"></i>
                             <h5>No Images Available</h5>
-                            <p>Images for ${lakeName} will be available soon.</p>
+                            <p>Images for ${trailName} will be available soon.</p>
                         </div>
                     </div>
                 </div>
@@ -85,18 +85,18 @@ $(document).ready(function() {
         }
 
         // Show the modal
-        $('#lakeModal').modal('show');
+        $('#trailModal').modal('show');
     });
 
     // Add smooth animation when modal opens
-    $('#lakeModal').on('show.bs.modal', function () {
+    $('#trailModal').on('show.bs.modal', function () {
         $(this).find('.modal-dialog').css({
             'transform': 'scale(0.8)',
             'opacity': '0'
         });
     });
 
-    $('#lakeModal').on('shown.bs.modal', function () {
+    $('#trailModal').on('shown.bs.modal', function () {
         $(this).find('.modal-dialog').animate({
             'transform': 'scale(1)',
             'opacity': '1'
