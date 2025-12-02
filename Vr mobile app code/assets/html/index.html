@@ -169,7 +169,7 @@
     </div>
 
     <!-- Trail Details Modal -->
-    <div class="modal fade" id="trailModal" tabindex="-1" aria-labelledby="trailModalLabel" aria-hidden="true">
+    <div class="modal fade" id="trailModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -186,11 +186,11 @@
                                         <!-- Images will be dynamically added here -->
                                     </div>
                                     <button class="carousel-control-prev carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="carousel-control-prev-icon"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
                                     <button class="carousel-control-next carousel-hidden" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="carousel-control-next-icon"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                     <div class="carousel-indicators carousel-hidden" id="imageIndicators">
@@ -225,19 +225,11 @@
                     <h5 class="modal-title" id="infoModalLabel">How to Access VR</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 d-flex flex-column align-items-start">
-                            <p>Android: Use YouTube App</p>
-                            <img src="../images/androidinfo1.jpg" alt="VR Headset" width="150" class="mb-1">
-                            <img src="../images/androidinfo2.jpg" alt="VR Headset" width="150" class="mb-1">
-                            <img src="../images/androidinfo3.jpg" alt="VR Headset" width="150" class="mb-1">
-                        </div>
-                        <div class="col-md-6 d-flex flex-column align-items-end">
-                            <p>iOS: Use Safari Browser</p>
-                            <img src="../images/androidinfo1 copy.jpg" alt="VR Headset" width="150" class="mb-1">
-                        </div>
-                    </div>
+                <div class="modal-body text-center">
+                            <p class="mb-5">Android: Use YouTube App</p>
+                            <img src="../images/androidinfo1.jpg" alt="VR Headset" width="150" class="mx-4">
+                            <img src="../images/androidinfo2.jpg" alt="VR Headset" width="150" class="mx-4">
+                            <img src="../images/androidinfo3.jpg" alt="VR Headset" width="150" class="mx-4">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
