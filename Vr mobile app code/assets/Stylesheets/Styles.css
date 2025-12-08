@@ -1,3 +1,8 @@
+/* Info icon styling for modal trigger */
+.info-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 /*Uncomment the lines below if you actually want a COOL font*/
 /*@font-face {
     font-family: 'Mick-CasterScript';
