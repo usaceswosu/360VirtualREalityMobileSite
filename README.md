@@ -1,131 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: grey;
-            border: 3px solid black;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            background-color: darkred;
-            border: 3px solid black
-            padding: 20px;
-        }
-        header img {
-            width: 150px;
-            height: auto;
-        }
-        .container {
-            display: flex;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: goldenrod;
-            padding: 20px;
-            height: 100vh;
-        }
-        .sidebar h2 {
-            font-size: 45px;
-            margin-bottom: 20px;
-            border: black;
-            color: white
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            color: black;
-            word-spacing: 0px;
-            font-size: 35px;
-        }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-            color: white;
-        }
-        .video-container {
-            text-align: center;
-        }
-        .video {
-            border: 5px solid black;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto 20px auto;
-            height: 562.5px;
-        }
-        .video-tabs {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .video-tabs button {
-            background-color: darkred;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 25px;
-            cursor: pointer;
-            font-size: 34px;
-        }
-        .video-tabs button:hover {
-            background-color: ;
-        }
-    </style>
-</head>
-<body>
+# USACE VR Mobile Site
 
-    <header>
-        <img src="https://i.imgur.com/oHMjfNz.png" alt="Website Logo">
-    </header>
+## Overview
+This project is a mobile-friendly web application for the US Army Corps of Engineers (USACE) that allows users to explore specific lakes and trails. Users can view images, watch YouTube videos for each trail, and access additional information through interactive modals.
 
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Northwest.html">Northwest</a></li>
-                <li><a href="Southpacific.html">South Pacific</a></li>
-                <li><a href="Southwest.html">Southwest</a></li>
-                <li><a href="mississippiValley.html">Mississippi Valley</a></li>
-                <li><a href="Southeast.html">Southeast</a></li>
-                <li><a href="GreatLakesAndOhioRiver.html">Great Lakes</a></li>
-                <li><a href="NorthAtlantic.html">North Atlantic</a></li>
-                <li><a href="PacificOcean.html">Pacific Ocean</a></li>
+## Features
+- Responsive table of trails by state
+- Modal popups for each trail with image carousels and trail lists
+- Per-image YouTube video links in modals
+- Info icon in the footer with a dedicated help modal
+- Bootstrap 5, DataTables, and jQuery integration
 
-            </ul>
-        </div>
+## Folder Structure
+```
+Vr mobile app code/
+├── assets/
+│   ├── html/
+│   │   └── index.html
+│   ├── JS/
+│   │   └── index.js
+│   ├── Stylesheets/
+│   │   └── Styles.css
+│   └── images/
+│       └── ... (lake, trail, info images)
+```
 
-        <div class="content">
-            <div class="video-container">
-                <iframe class="video" id="mainVideo" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
+## Setup & Usage
+1. **Clone or download the repository.**
+2. Open `assets/html/index.html` in your browser.
+3. Make sure all dependencies are loaded via CDN (Bootstrap, DataTables, jQuery, Bootstrap Icons).
+4. To add or update lakes, trails, images, or videos, edit the data attributes in the HTML table.
+5. To customize styles, edit `assets/Stylesheets/Styles.css`.
 
-                <div class="video-tabs">
-                    <button onclick="changeVideo('https://www.youtube.com/embed/e5UOtzRybzU')">Lake</button>
-                    <button onclick="changeVideo('https://www.youtube.com/embed/4NnM9Bu-BU0')">Boat</button>
-                    <button onclick="changeVideo('https://www.youtube.com/embed/Gt97WoWfzmo')">Forest</button>
-                </div>
-            </div>
-        </div>
-    </div>
+## Customization
+- **Add new lakes/trails:**
+    - Update the table in `index.html` with new `<a class="lake-link">` or `<a class="trail-link">` entries.
+    - Use `data-images`, `data-image-names`, and `data-video-urls` attributes for dynamic modal content.
+- **Info Modal:**
+    - Edit the modal with id `infoModal` in `index.html` to update help text or images.
+- **Images:**
+    - Place new images in the `assets/images/` directory and reference them in the HTML.
 
-    <script>
-        function changeVideo(videoUrl) {
-            document.getElementById('mainVideo').src = videoUrl;
-        }
-    </script>
+## Technologies Used
+- HTML5, CSS3, JavaScript (ES6)
+- Bootstrap 5
+- jQuery
+- DataTables
+- Bootstrap Icons
 
-</body>
-</html>
+## Credits
+- US Army Corps of Engineers (USACE)
+- Bootstrap, DataTables, jQuery, Bootstrap Icons
+- SWOSU Students: Ann Groicher, Dillon Martinez, Matthew Miller, and Sky Jones
+
+## License
+This project is for educational and demonstration purposes only
