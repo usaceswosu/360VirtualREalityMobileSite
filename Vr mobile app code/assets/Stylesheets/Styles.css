@@ -1,8 +1,33 @@
-/* Basic reset and Bootstrap grid fixes */
+/* Info icon styling for modal trigger */
+.info-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/*Uncomment the lines below if you actually want a COOL font*/
+/*@font-face {
+    font-family: 'Mick-CasterScript';
+    src: url(../fonts/mick-caster/Mick\ Caster.ttf) format('truetype');
+}*/
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #dee2e6; /* Change this color to whatever you want */
+    margin: 0px;
+    font-family: 'Mick-CasterScript', sans-serif;
+    background-image: url('../images/forest.png');
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 5px 5px 8px;
+}
+h4 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: black 3px 3px 5px;
 }
 
 .container-fluid {
@@ -30,37 +55,17 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgb(66, 99, 70), rgb(35, 56, 37)); /* Diagonal green gradient */ /*106,139,110 to 75,96,77 for first option*/
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
-}
-
-/* Responsive DataTable */
-@media (max-width: 768px) {
-    .content {
-        padding: 10px;
-    }
-    
-    .table-container {
-        padding: 15px;
-    }
-    
-    /* Make table more mobile-friendly */
-    table.dataTable {
-        font-size: 14px;
-    }
-    
-    .dataTables_wrapper .dataTables_filter input {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
 }
 
 /* Custom Table Footer Styling */
 .table-footer {
-    background-color: #f8f9fa !important;
-    border-top: 2px solid #dee2e6 !important;
+    background-color: #ffeac1 !important;
+    border-top: 2px solid #a3a6a9 !important;
+    border-bottom: 2px solid #a3a6a9 !important;
     padding: 15px !important;
 }
 
@@ -91,14 +96,175 @@ body {
     gap: 8px;
 }
 
+.crop { /* Class to crop logo image */
+    width: 60px;
+    height: 45px; 
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 10%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table tbody td a {
+    color: #606060;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block; /* Required for transforms to work for text */
+    transition: all 0.3s ease;
+}
+
+.table tbody td a:hover {
+    color: #212121; /*212121 for darker on hover*/
+    text-decoration: underline;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+
+.modal{
+    --bs-modal-width: 100%;
+}
+
 /* Mobile Card-Style Table Layout */
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     /* Hide the original table headers on mobile */
     .table thead {
         display: none;
     }
+
+    .toggle-label {
+        font-size: 20px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
     
+    .form-check-label {
+        font-size: 22px;
+    }
+    .table-container {
+        max-width: 500px; /* ← Smaller container */
+    }
     /* Make table rows display as cards */
+    .table tbody tr {
+        display: block;
+        border: 2px solid #969696;
+        background-color: #d6d2c8;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
+        max-width: 500px;
+    }
+    
+    /* Make each cell a block element with label */
+    .table tbody td {
+        display: block;
+        border: none;
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 2px solid #969696;
+        background-color: #f6faf6;
+        border-radius: 5px;
+        white-space: nowrap;
+        text-align: center;        /* ← Centers the text horizontally */
+    }
+    
+    /* Add labels before each cell content */
+    .table tbody td:nth-child(1):before { content: "Arkansas "; }
+    .table tbody td:nth-child(2):before { content: "Georgia "; }
+    .table tbody td:nth-child(3):before { content: "Missouri "; }
+    .table tbody td:nth-child(4):before { content: "Ohio "; }
+    .table tbody td:nth-child(5):before { content: "West Virginia "; }
+    
+    /* Style the labels */
+    .table tbody td:before {
+
+        font-weight: bold;
+        color: #495057;
+        display: inline-block;
+        width: auto;
+        font-size: 25px;
+        margin-right: 10px; /* Space between label and content */
+    }
+    
+    /* Hide empty cells on mobile */
+    .table tbody td:empty {
+        display: none;
+    }
+    
+    /* Adjust footer for mobile */
+    .table tfoot {
+        display: block;
+    }
+    
+    .table tfoot tr {
+        display: block;
+    }
+    
+    .table tfoot th {
+        display: block;
+        border: none;
+    }
+    .form-check-input::before {
+        width: 14px; /* Slightly bigger ball for tablet view to match toggle switch */
+        height: 14px;
+        bottom: 2px; /* Adjust ball position to align better for tablet view */
+    }
+
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {  /* Further adjustments for VERY small screens */
+   /* Table and cell styling */
+   .table tbody td {
+       padding: 15px;
+       font-size: 14px;
+       white-space: normal; /* Allow text to wrap */
+       word-break: break-word;
+       display: block;
+       border: none;
+       border-bottom: 1px solid #969696;
+   }
+   
+   .table tbody td:before {
+       font-size: 15px;
+       font-weight: bold;
+       color: #495057;
+       display: inline-block;
+       width: 120px;
+       margin-right: 10px;
+   }
+
+   /* Toggle controls */
+   .toggle-label {
+        font-size: 15px;
+    }
+    .form-check-input {
+        height: 15px;
+    }
+    
+    .form-check-label {
+        font-size: 17px;
+    }
+    .form-check-input::before {
+        width: 13px; /* Slightly smaller ball for mobile view */
+        height: 13px;
+        bottom: 0px; /* Adjust ball position to align better for mobile view */
+        transform: translateX(1px); /* Slightly adjust ball position */
+    }
+
+    /* Table structure for mobile cards */
+    .table thead {
+        display: none;
+    }
+    
     .table tbody tr {
         display: block;
         border: 2px solid #969696;
@@ -108,29 +274,12 @@ body {
         box-shadow: 10px 10px 4px rgba(0,0,0,0.1);
     }
     
-    /* Make each cell a block element with label */
-    .table tbody td {
-        display: block;
-        border: none;
-        padding: 15px;
-        border-bottom: 1px solid #969696;
-    }
-    
     /* Add labels before each cell content */
     .table tbody td:nth-child(1):before { content: "Arkansas: "; }
     .table tbody td:nth-child(2):before { content: "Georgia: "; }
     .table tbody td:nth-child(3):before { content: "Missouri: "; }
     .table tbody td:nth-child(4):before { content: "Ohio: "; }
     .table tbody td:nth-child(5):before { content: "West Virginia: "; }
-    
-    /* Style the labels */
-    .table tbody td:before {
-        font-weight: bold;
-        color: #495057;
-        display: inline-block;
-        width: 120px;
-        margin-right: 10px;
-    }
     
     /* Hide empty cells on mobile */
     .table tbody td:empty {
@@ -155,4 +304,120 @@ body {
         display: block;
         border: none;
     }
+
+    /* Carousel styling */
+    .carousel-caption {
+        background-color: rgba(75, 96, 77, 0.8);
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .carousel-caption h5 {
+        font-family: 'Mick-CasterScript', sans-serif;
+        font-size: 0.9rem;
+    }
+
+/* For images in modal */    
+}
+img{
+    border-radius: 15px;
+}
+
+/* Modal Customization */
+.modal-content {
+    background: linear-gradient(135deg, #f6faf6, #e8f5e8);
+    border-radius: 15px;
+    border: 3px solid #6a8b6e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #6a8b6e, #4b604d);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 2px solid #4b604d;
+}
+
+.modal-title {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 1.2rem;
+}
+
+.btn-secondary {
+    background-color: #6a8b6e;
+}
+
+.btn-secondary:hover {
+    background-color: #4b604d;
+}
+
+.modal-body {
+    padding: 2rem;
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.2rem;
+}
+
+.modal-body h6 {
+    color: #4b604d;
+    font-size: 1.5rem;
+}
+
+.modal-body p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    border-top: 2px solid #6a8b6e;
+    background-color: #ffeac1;
+}
+
+/* Carousel Controls for Modal */
+.carousel-hidden {
+    display: none !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(106, 139, 110, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(106, 139, 110, 0.6);
+}
+
+.carousel-indicators button {
+    background-color: #6a8b6e;
+    border: 2px solid #4b604d;
+}
+
+.carousel-indicators button.active {
+    background-color: #4b604d;
+}
+
+.carousel-caption {
+    background-color: rgba(75, 96, 77, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-caption h5 {
+    font-family: 'Mick-CasterScript', sans-serif;
+    font-size: 1.2rem;
+}
+
+.carousel-caption a {
+    color: white;
+    text-decoration: underline;
 }
