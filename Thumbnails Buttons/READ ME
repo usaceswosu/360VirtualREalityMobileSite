@@ -1,0 +1,38 @@
+Not that important, it just explains what two versions of the code exists aand how they work. 
+
+***Overview:***
+Data 
+  - imagelist.js - Version Two, a collective list of the images
+  - thumbnail_list.js - Version Two, the html code and opening link/running code based on image
+  - thumbnails.js - Version One, where every image has its own button
+images/imagenames - Held all of the images in here, we will most likely have to use a Github LFS for the images to store in the repos, 
+                  - so that we can continue to makes commits. For now its emtpy because it was too large for the repo
+  - images.txt - this is a text file that holds all of the image names, not important can be deleted without issue when project is completed. 
+index.html - main branch sort to speak, just what it will look like so you have an idea when it needs to be called and in what order
+Script.js - do not touch this, unless you want it to break. Its where the magic happens.
+Style.css - Temp Style CSS file that I made, doesnt do much otherwise
+
+***Version One***
+Version one is code designed to work as a single button for every single image that is used. You can find the code in:
+Thumbnails.js
+
+As you can see its a nightmare to look at, but the top part is simplified version and cleaner.
+Thats what every single image would look like with its own button.
+
+In Index.html, it pulls Thumbnail.js after it bulls script.js.
+
+***Version Two***
+Bassically, version two utilizes a list of images, and builds a button in initilization for each image. 
+
+You can find the Version Two files here:
+imagelist.js – Contains a simple array of image file names.
+thumbnail_list.js – Uses that list to automatically generate the clickable thumbnails and link or run code based on which image is clicked.
+Version Two only needs the image names. The code builds all buttons in the browser.
+
+The Advantage with Version Two, is if you need to add additional images, you can add the image name to imagelist.js and the code will still automatically build a button for it.
+
+The disavantage with this version, is eventually the code will need to be updated so that each will run its own code and/or open up to its own links.
+However! The list still provides a cleaner approach and also allows easier integration of more images (even possibly allowing USACE to add images and videos themselves for the future for longevity purposes)''
+Also helps with scalebility 
+  
+The structure in index.html remains mostly the same, it just loads imagelist.js first, followed by thumbnail_list.js, replacing the older thumbnails.js from Version One.
