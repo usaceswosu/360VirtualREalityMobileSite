@@ -13,10 +13,10 @@ This project is a mobile-friendly web application for the US Army Corps of Engin
 ## Folder Structure
 ```
 Vr mobile app code/
-├── assets/
-│   ├── html/
-│   │   └── index.html
-│   ├── JS/
+├── app/
+│   └── index.html
+│   ├── js/
+│   │   └── datatable-init.js
 │   │   └── index.js
 │   ├── Stylesheets/
 │   │   └── Styles.css
@@ -26,10 +26,10 @@ Vr mobile app code/
 
 ## Setup & Usage
 1. **Clone or download the repository.**
-2. Open `assets/html/index.html` in your browser.
+2. Open `app/index.html` in your browser.
 3. Make sure all dependencies are loaded via CDN (Bootstrap, DataTables, jQuery, Bootstrap Icons).
 4. To add or update lakes, trails, images, or videos, edit the data attributes in the HTML table.
-5. To customize styles, edit `assets/Stylesheets/Styles.css`.
+5. To customize styles, edit `app/Stylesheets/Styles.css`.
 
 ## Customization
 - **Add new lakes/trails:**
@@ -38,7 +38,7 @@ Vr mobile app code/
 - **Info Modal:**
     - Edit the modal with id `infoModal` in `index.html` to update help text or images.
 - **Images:**
-    - Place new images in the `assets/images/` directory and reference them in the HTML.
+    - Place new images in the `app/images/` directory and reference them in the HTML.
 
 ## Technologies Used
 - HTML5, CSS3, JavaScript (ES6)
