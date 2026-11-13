@@ -50,7 +50,7 @@ Vr mobile app code/
 ## Credits
 - US Army Corps of Engineers (USACE)
 - Bootstrap, DataTables, jQuery, Bootstrap Icons
-- SWOSU Students: Ann Groicher, Dillon Martinez, Matthew Miller, and Sky Jones
+- SWOSU Students: Ann Groicher, Dillon Martinez, Matthew Miller, Sky Jones, Jamie Swoish, Jarret Queen, Joshua Shaw, and Abdulmalek Albraithen.
 
 ## License
 This project is for educational and demonstration purposes only
